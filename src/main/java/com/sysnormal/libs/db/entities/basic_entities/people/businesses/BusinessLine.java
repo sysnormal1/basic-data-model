@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class BusinessLine extends BaseBasicEntity {
+public class BusinessLine extends BaseBasicEntity<BusinessLine> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

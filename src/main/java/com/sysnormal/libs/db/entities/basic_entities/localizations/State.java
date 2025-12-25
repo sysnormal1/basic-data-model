@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class State extends BaseBasicEntity {
+public class State extends BaseBasicEntity<State> {
 
     @Column(name = "country_id", nullable = false)
     private Long countryId;

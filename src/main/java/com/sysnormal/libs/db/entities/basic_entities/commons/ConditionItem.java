@@ -11,7 +11,7 @@ import lombok.Setter;
 @Table(
         name = "condition_items"
 )
-public class ConditionItem extends BaseBasicEntity {
+public class ConditionItem extends BaseBasicEntity<ConditionItem> {
 
     @Column(name = "condition_id", nullable = false)
     private Long conditionId;

@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class IdentifierType extends BaseBasicEntity {
+public class IdentifierType extends BaseBasicEntity<IdentifierType> {
     @Column(name = "name", nullable = false)
     private String name;
 

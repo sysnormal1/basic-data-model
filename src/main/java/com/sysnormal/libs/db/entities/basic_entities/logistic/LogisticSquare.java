@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class LogisticSquare extends BaseBasicEntity {
+public class LogisticSquare extends BaseBasicEntity<LogisticSquare> {
 
     @Column(name = "logistic_route_id", nullable = false)
     private Long logisticRouteId;

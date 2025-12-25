@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class DataOrigin extends BaseBasicEntity {
+public class DataOrigin extends BaseBasicEntity<DataOrigin> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

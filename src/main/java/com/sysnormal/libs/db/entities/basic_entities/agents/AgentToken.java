@@ -27,7 +27,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class AgentToken extends BaseBasicEntity {
+public class AgentToken extends BaseBasicEntity<AgentToken> {
 
     @Column(name = "agent_id", nullable = false)
     private Long agentId;

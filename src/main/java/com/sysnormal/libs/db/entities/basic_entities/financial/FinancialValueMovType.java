@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class FinancialValueMovType extends BaseBasicEntity {
+public class FinancialValueMovType extends BaseBasicEntity<FinancialValueMovType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

@@ -21,7 +21,7 @@ import lombok.Setter;
                 )
         }
 )
-public class EntityType extends BaseBasicEntity {
+public class EntityType extends BaseBasicEntity<EntityType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

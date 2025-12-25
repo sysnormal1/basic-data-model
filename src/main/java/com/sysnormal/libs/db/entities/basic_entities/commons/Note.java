@@ -27,7 +27,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class Note extends BaseBasicEntity {
+public class Note extends BaseBasicEntity<Note> {
 
     @Column(name = "table_id", nullable = false)
     private Long tableId;

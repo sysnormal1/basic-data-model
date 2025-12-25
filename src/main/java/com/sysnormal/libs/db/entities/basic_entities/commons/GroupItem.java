@@ -24,7 +24,7 @@ import org.hibernate.annotations.OnDeleteAction;
                 )
         }
 )
-public class GroupItem extends BaseBasicEntity {
+public class GroupItem extends BaseBasicEntity<GroupItem> {
 
     @Column(name = "group_id", nullable = false)
     private Long groupId;

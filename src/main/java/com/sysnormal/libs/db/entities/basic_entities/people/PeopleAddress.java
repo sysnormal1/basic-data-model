@@ -24,7 +24,7 @@ import org.hibernate.annotations.OnDeleteAction;
                 )
         }
 )
-public class PeopleAddress extends BaseBasicEntity {
+public class PeopleAddress extends BaseBasicEntity<PeopleAddress> {
 
     @Column(name = "people_id", nullable = false)
     private Long peopleId;

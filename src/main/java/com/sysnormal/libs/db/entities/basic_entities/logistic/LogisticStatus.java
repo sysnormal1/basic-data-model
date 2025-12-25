@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class LogisticStatus extends BaseBasicEntity {
+public class LogisticStatus extends BaseBasicEntity<LogisticStatus> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

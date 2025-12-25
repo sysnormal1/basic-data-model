@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class Currency extends BaseBasicEntity {
+public class Currency extends BaseBasicEntity<Currency> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

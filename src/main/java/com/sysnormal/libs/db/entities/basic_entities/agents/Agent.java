@@ -28,7 +28,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class Agent extends BaseBasicEntity {
+public class Agent extends BaseBasicEntity<Agent> {
 
     @Column(name = "identifier_type_id", nullable = false)
     private Long identifierTypeId;

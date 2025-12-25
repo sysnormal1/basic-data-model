@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class AccessProfile extends BaseBasicEntity {
+public class AccessProfile extends BaseBasicEntity<AccessProfile> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

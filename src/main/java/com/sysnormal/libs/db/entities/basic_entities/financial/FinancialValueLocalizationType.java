@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class FinancialValueLocalizationType extends BaseBasicEntity {
+public class FinancialValueLocalizationType extends BaseBasicEntity<FinancialValueLocalizationType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

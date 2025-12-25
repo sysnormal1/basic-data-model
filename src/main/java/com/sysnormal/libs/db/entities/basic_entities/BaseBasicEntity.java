@@ -1,6 +1,6 @@
 package com.sysnormal.libs.db.entities.basic_entities;
 
-import com.sysnormal.libs.db.entities.base_entities.BaseCommonEntity;
+import com.sysnormal.libs.db.entities.base_entities.BaseCommonEntityWithParent;
 import com.sysnormal.libs.db.entities.basic_entities.agents.Agent;
 import com.sysnormal.libs.db.entities.basic_entities.commons.DataOrigin;
 import com.sysnormal.libs.db.entities.basic_entities.commons.RecordStatus;
@@ -8,12 +8,12 @@ import com.sysnormal.libs.db.entities.basic_entities.database.Tables;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.*;
+import org.hibernate.annotations.ColumnDefault;
 
 @MappedSuperclass
 @Getter
 @Setter
-public abstract class BaseBasicEntity  extends BaseCommonEntity {
+public abstract class BaseBasicEntity<T extends BaseBasicEntity<T>>  extends BaseCommonEntityWithParent<T> {
 
     @Column(name = "status_reg_id", nullable = false)
     @ColumnDefault(RecordStatus.ACTIVE_ID+"")

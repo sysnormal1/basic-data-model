@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class FinancialValueForm extends BaseBasicEntity {
+public class FinancialValueForm extends BaseBasicEntity<FinancialValueForm> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

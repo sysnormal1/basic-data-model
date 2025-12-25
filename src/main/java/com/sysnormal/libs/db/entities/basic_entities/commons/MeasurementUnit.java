@@ -22,7 +22,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class MeasurementUnit extends BaseBasicEntity {
+public class MeasurementUnit extends BaseBasicEntity<MeasurementUnit> {
 
     @Column(name = "greatness_id", nullable = false)
     private Long greatnessId;

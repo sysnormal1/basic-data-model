@@ -34,7 +34,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class Relationship extends BaseBasicEntity {
+public class Relationship extends BaseBasicEntity<Relationship> {
 
     @Column(name = "relationship_type_id", nullable = false)
     private Long relationshipTypeId;

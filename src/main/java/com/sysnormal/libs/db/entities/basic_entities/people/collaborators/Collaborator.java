@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Collaborator extends BasePeopleEntity {
+public class Collaborator extends BasePeopleEntity<Collaborator> {
 
     protected static final long TABLE_ID = 110L;
     public static long getTableId() {

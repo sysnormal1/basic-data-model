@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class AssetType extends BaseBasicEntity {
+public class AssetType extends BaseBasicEntity<AssetType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

@@ -23,7 +23,7 @@ import org.hibernate.annotations.OnDeleteAction;
                 )
         }
 )
-public class AgentProfileTimework extends BaseBasicEntity {
+public class AgentProfileTimework extends BaseBasicEntity<AgentProfileTimework> {
 
     @Column(name = "agent_id", nullable = false)
     private Long agentId;

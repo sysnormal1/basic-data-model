@@ -26,7 +26,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class Condition extends BaseBasicEntity {
+public class Condition extends BaseBasicEntity<Condition> {
 
     @Column(name = "entity_type_id", nullable = false)
     private Long entityTypeId;

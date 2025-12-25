@@ -22,7 +22,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Tables extends BaseBasicEntity {
+public class Tables extends BaseBasicEntity<Tables> {
 
     @Column(name = "data_connection_id", nullable = false)
     private Long dataConnectionId;

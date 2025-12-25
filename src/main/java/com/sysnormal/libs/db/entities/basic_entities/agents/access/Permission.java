@@ -34,7 +34,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class Permission extends BaseBasicEntity {
+public class Permission extends BaseBasicEntity<Permission> {
 
     @Column(name = "power_type_id", nullable = false)
     private Long powerTypeId;

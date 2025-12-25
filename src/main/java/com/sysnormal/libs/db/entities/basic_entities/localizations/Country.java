@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Country extends BaseBasicEntity {
+public class Country extends BaseBasicEntity<Country> {
 
     @Column(name = "continent_id", nullable = false)
     private Long continentId;

@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class ContractType extends BaseBasicEntity {
+public class ContractType extends BaseBasicEntity<ContractType> {
 
     @Column(name = "name")
     private String name;

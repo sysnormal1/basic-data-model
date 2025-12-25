@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Process extends BaseBasicEntity {
+public class Process extends BaseBasicEntity<Process> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

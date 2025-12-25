@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class Connection extends BaseBasicEntity {
+public class Connection extends BaseBasicEntity<Connection> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

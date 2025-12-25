@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class SyncStatus extends BaseBasicEntity {
+public class SyncStatus extends BaseBasicEntity<SyncStatus> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

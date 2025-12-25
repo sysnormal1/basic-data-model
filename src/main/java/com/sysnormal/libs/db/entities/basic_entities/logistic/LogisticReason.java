@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class LogisticReason extends BaseBasicEntity {
+public class LogisticReason extends BaseBasicEntity<LogisticReason> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

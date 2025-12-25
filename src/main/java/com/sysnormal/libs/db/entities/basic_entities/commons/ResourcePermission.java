@@ -36,7 +36,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class ResourcePermission extends BaseBasicEntity {
+public class ResourcePermission extends BaseBasicEntity<ResourcePermission> {
 
     @Column(name = "resource_id", nullable = false)
     private Long resourceId;

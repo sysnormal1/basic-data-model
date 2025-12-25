@@ -24,7 +24,7 @@ import org.hibernate.annotations.OnDeleteAction;
                 )
         }
 )
-public class PostalCodeStreet extends BaseBasicEntity {
+public class PostalCodeStreet extends BaseBasicEntity<PostalCodeStreet> {
 
     @Column(name = "postal_code_id", nullable = false)
     private Long postalCodeId;

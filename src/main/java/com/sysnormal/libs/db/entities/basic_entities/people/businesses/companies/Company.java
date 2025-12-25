@@ -22,7 +22,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Company extends BasePeopleEntity {
+public class Company extends BasePeopleEntity<Company> {
 
     protected static final long TABLE_ID = 3000L;
     public static long getTableId() {

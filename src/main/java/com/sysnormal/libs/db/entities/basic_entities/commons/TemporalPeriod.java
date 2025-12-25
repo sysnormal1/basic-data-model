@@ -24,7 +24,7 @@ import org.hibernate.annotations.Check;
                 )
         }
 )
-public class TemporalPeriod extends BaseBasicEntity {
+public class TemporalPeriod extends BaseBasicEntity<TemporalPeriod> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

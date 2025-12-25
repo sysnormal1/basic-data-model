@@ -27,7 +27,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class Client extends BasePeopleEntity {
+public class Client extends BasePeopleEntity<Client> {
 
     @Column(name = "business_unit_id")
     private Long businessUnitId;

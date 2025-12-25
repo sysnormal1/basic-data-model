@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Comparator extends BaseBasicEntity {
+public class Comparator extends BaseBasicEntity<Comparator> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Language extends BaseBasicEntity {
+public class Language extends BaseBasicEntity<Language> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

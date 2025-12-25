@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class StreetType extends BaseBasicEntity {
+public class StreetType extends BaseBasicEntity<StreetType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

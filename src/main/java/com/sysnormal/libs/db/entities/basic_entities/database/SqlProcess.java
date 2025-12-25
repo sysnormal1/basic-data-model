@@ -21,7 +21,7 @@ import lombok.Setter;
                 )
         }
 )
-public class SqlProcess extends BaseBasicEntity {
+public class SqlProcess extends BaseBasicEntity<SqlProcess> {
 
     @Column(name = "sql_object_type_id", nullable = false)
     private Long sqlObjectTypeId;

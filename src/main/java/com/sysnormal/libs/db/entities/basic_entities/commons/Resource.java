@@ -21,7 +21,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Resource extends BaseBasicEntity {
+public class Resource extends BaseBasicEntity<Resource> {
 
     @Column(name = "resource_type_id", nullable = false)
     private Long resourceTypeId;

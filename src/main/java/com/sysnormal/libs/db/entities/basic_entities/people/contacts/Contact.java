@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Contact extends BaseBasicEntity {
+public class Contact extends BaseBasicEntity<Contact> {
 
     @Column(name = "contact_type_id", nullable = false)
     private Long contactTypeId;

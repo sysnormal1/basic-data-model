@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Context extends BaseBasicEntity {
+public class Context extends BaseBasicEntity<Context> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

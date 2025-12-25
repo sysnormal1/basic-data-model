@@ -23,7 +23,7 @@ import lombok.Setter;
         }
 )
 
-public class Supplier extends BasePeopleEntity {
+public class Supplier extends BasePeopleEntity<Supplier> {
     protected static final long TABLE_ID = 5000L;
     public static long getTableId() {
         return TABLE_ID;

@@ -23,7 +23,7 @@ import org.hibernate.annotations.OnDeleteAction;
                 )
         }
 )
-public class Text extends BaseBasicEntity {
+public class Text extends BaseBasicEntity<Text> {
 
     @Column(name = "language_id", nullable = false)
     private Long languageId;

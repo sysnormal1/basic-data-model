@@ -36,7 +36,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class AgentTimework extends BaseBasicEntity {
+public class AgentTimework extends BaseBasicEntity<AgentTimework> {
 
     @Column(name = "agent_profile_timework_id", nullable = false)
     private Long agentProfileTimeworkId;

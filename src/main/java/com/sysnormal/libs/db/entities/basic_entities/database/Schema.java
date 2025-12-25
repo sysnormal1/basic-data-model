@@ -22,7 +22,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class Schema extends BaseBasicEntity {
+public class Schema extends BaseBasicEntity<Schema> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

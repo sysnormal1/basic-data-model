@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Neighborhood extends BaseBasicEntity {
+public class Neighborhood extends BaseBasicEntity<Neighborhood> {
 
     @Column(name = "city_id", nullable = false)
     private Long cityId;

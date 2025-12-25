@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @MappedSuperclass
 @Getter
 @Setter
-public abstract class BasePeopleEntity  extends BaseBasicEntity {
+public abstract class BasePeopleEntity<T extends BasePeopleEntity<T>>  extends BaseBasicEntity<T> {
 
     @Column(name = "people_id", nullable = false)
     private Long peopleId;

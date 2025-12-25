@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Packaging extends BaseBasicEntity {
+public class Packaging extends BaseBasicEntity<Packaging> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

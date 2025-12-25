@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class SqlObjectType extends BaseBasicEntity {
+public class SqlObjectType extends BaseBasicEntity<SqlObjectType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

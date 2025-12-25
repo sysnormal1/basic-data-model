@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Group extends BaseBasicEntity {
+public class Group extends BaseBasicEntity<Group> {
 
     @Column(name = "entity_type_id", nullable = false)
     private Long entityTypeId;

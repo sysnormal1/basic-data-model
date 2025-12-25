@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Continent extends BaseBasicEntity {
+public class Continent extends BaseBasicEntity<Continent> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

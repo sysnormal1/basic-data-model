@@ -29,7 +29,7 @@ import java.math.BigDecimal;
                 )
         }
 )
-public class PostalCodePath extends BaseBasicEntity {
+public class PostalCodePath extends BaseBasicEntity<PostalCodePath> {
 
     @Column(name = "postal_code_id", nullable = false)
     private Long postalCodeId;

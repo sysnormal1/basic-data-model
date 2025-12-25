@@ -27,7 +27,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class ListName extends BaseBasicEntity {
+public class ListName extends BaseBasicEntity<ListName> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

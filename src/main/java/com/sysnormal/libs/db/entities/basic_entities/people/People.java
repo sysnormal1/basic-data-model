@@ -35,7 +35,7 @@ import java.time.LocalDateTime;
             )
         }
 )
-public class People extends BaseBasicEntity {
+public class People extends BaseBasicEntity<People> {
 
     @Column(name = "identifier_doc_type_id", nullable = false)
     private Long identifierDocTypeId;

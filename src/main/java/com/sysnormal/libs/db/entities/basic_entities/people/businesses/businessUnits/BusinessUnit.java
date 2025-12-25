@@ -21,7 +21,7 @@ import lombok.Setter;
                 )
         }
 )
-public class BusinessUnit extends BasePeopleEntity {
+public class BusinessUnit extends BasePeopleEntity<BusinessUnit> {
     @Column(name = "company_id", nullable = false)
     private Long companyId;
 

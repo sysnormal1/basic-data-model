@@ -24,7 +24,7 @@ import java.time.LocalDateTime;
                 )
         }
 )
-public class CollaboratorXFunction extends BaseBasicEntity {
+public class CollaboratorXFunction extends BaseBasicEntity<CollaboratorXFunction> {
 
     @Column(name = "collaborator_contract_id", nullable = false)
     private Long collaboratorContractId;

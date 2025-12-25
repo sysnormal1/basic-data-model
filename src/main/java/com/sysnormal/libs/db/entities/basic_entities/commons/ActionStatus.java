@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class ActionStatus extends BaseBasicEntity {
+public class ActionStatus extends BaseBasicEntity<ActionStatus> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

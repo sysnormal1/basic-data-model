@@ -22,7 +22,7 @@ import java.math.BigDecimal;
                 )
         }
 )
-public class City extends BaseBasicEntity {
+public class City extends BaseBasicEntity<City> {
 
     @Column(name = "state_id", nullable = false)
     private Long stateId;

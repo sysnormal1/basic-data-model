@@ -25,7 +25,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class DataType extends BaseBasicEntity {
+public class DataType extends BaseBasicEntity<DataType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

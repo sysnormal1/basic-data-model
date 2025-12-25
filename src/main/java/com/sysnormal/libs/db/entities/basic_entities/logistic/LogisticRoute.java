@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class LogisticRoute extends BaseBasicEntity {
+public class LogisticRoute extends BaseBasicEntity<LogisticRoute> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

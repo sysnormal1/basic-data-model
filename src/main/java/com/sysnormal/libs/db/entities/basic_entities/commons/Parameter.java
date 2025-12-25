@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Parameter extends BaseBasicEntity {
+public class Parameter extends BaseBasicEntity<Parameter> {
 
     @Column(name = "data_type_id", nullable = false)
     private Long dataTypeId;

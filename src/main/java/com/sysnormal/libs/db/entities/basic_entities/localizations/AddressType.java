@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class AddressType extends BaseBasicEntity {
+public class AddressType extends BaseBasicEntity<AddressType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

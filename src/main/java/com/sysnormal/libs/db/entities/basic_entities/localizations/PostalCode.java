@@ -20,7 +20,7 @@ import lombok.Setter;
                 )
         }
 )
-public class PostalCode extends BaseBasicEntity {
+public class PostalCode extends BaseBasicEntity<PostalCode> {
 
     @Column(name = "postal_code", nullable = false, length = 127)
     private String postalCode;

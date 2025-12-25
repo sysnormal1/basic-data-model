@@ -21,7 +21,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class Assets extends BaseBasicEntity {
+public class Assets extends BaseBasicEntity<Assets> {
 
     @Column(name = "asset_type_id", nullable = false)
     private Long assetTypeId;

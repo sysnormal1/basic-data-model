@@ -29,7 +29,7 @@ import java.math.BigDecimal;
                 )
         }
 )
-public class Address extends BaseBasicEntity {
+public class Address extends BaseBasicEntity<Address> {
 
     @Column(name = "address_type_id", nullable = false)
     private Long addressTypeId;

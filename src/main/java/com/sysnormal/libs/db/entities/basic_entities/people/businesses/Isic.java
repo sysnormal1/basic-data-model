@@ -28,7 +28,7 @@ import lombok.Setter;
                 )
         }
 )
-public class Isic extends BaseBasicEntity {
+public class Isic extends BaseBasicEntity<Isic> {
     @Column(name = "country_id")
     private Long countryId;
 

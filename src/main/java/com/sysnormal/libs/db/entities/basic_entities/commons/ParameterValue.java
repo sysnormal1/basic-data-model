@@ -3,7 +3,6 @@ package com.sysnormal.libs.db.entities.basic_entities.commons;
 import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
 import com.sysnormal.libs.db.entities.basic_entities.database.Tables;
 import jakarta.persistence.*;
-import jakarta.persistence.Parameter;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +24,7 @@ import lombok.Setter;
                 )
         }
 )
-public class ParameterValue extends BaseBasicEntity {
+public class ParameterValue extends BaseBasicEntity<ParameterValue> {
 
     @Column(name = "parameter_id", nullable = false)
     private Long parameterId;

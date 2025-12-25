@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class RelationshipType extends BaseBasicEntity {
+public class RelationshipType extends BaseBasicEntity<RelationshipType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

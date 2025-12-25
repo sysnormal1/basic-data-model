@@ -23,7 +23,7 @@ import lombok.Setter;
                 )
         }
 )
-public class PowerType extends BaseBasicEntity {
+public class PowerType extends BaseBasicEntity<PowerType> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;

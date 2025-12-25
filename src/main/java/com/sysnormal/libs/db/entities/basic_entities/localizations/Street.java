@@ -21,7 +21,7 @@ import org.hibernate.annotations.ColumnDefault;
                 )
         }
 )
-public class Street extends BaseBasicEntity {
+public class Street extends BaseBasicEntity<Street> {
 
     @Column(name = "street_type_id", nullable = false)
     @ColumnDefault(StreetType.STREET_ID+"")
