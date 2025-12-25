@@ -1,0 +1,73 @@
+package com.sysnormal.libs.db.entities.basic_entities.commons;
+
+import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@Table(
+        name = "relationship_types",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "relationship_types_u1",
+                        columnNames = {
+                                "(coalesce(parent_id, 0))","status_reg_id","data_origin_id","(coalesce(table_origin_id, 0))","(coalesce(id_at_origin, 0))",
+                                "name"
+                        }
+                )
+        }
+)
+public class RelationshipType extends BaseBasicEntity {
+
+    @Column(name = "name", nullable = false, length = 127)
+    private String name;
+
+    @Column(name = "description")
+    private String description;
+
+    protected static final long TABLE_ID = 1000;
+    public static long getTableId() {
+        return TABLE_ID;
+    }
+
+    public static final long RELATIONSHIP_ID = 1;
+    public static final long IDENTIFIER_ID = 2;
+    public static final long SUBORDINATED_ID = 10;
+    public static final long WINTHOR_ID_ID = 11;
+    public static final long EP_ID_ID = 12;
+
+    public static final RelationshipType RELATIONSHIP = new RelationshipType(){{
+        setId(RELATIONSHIP_ID);
+        setIsSysRec((byte) 1);
+        setName("RELATIONSHIP");
+    }};
+    public static final RelationshipType IDENTIFIER = new RelationshipType(){{
+        setId(IDENTIFIER_ID);
+        setIsSysRec((byte) 1);
+        setName("IDENTIFIER");
+    }};
+    public static final RelationshipType SUBORDINATED = new RelationshipType(){{
+        setId(SUBORDINATED_ID);
+        setIsSysRec((byte) 1);
+        setName("SUBORDINATED");
+    }};
+    public static final RelationshipType WINTHOR_ID = new RelationshipType(){{
+        setId(WINTHOR_ID_ID);
+        setIsSysRec((byte) 1);
+        setName("WINTHOR ID");
+    }};
+    public static final RelationshipType EP_ID = new RelationshipType(){{
+        setId(EP_ID_ID);
+        setIsSysRec((byte) 1);
+        setName("EP ID");
+    }};
+
+
+
+}

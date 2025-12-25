@@ -1,0 +1,42 @@
+package com.sysnormal.libs.db.entities.basic_entities.localizations;
+
+import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(
+        name = "countries",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "countries_u1",
+                        columnNames = {
+                                "(coalesce(parent_id, 0))","status_reg_id","data_origin_id","(coalesce(table_origin_id, 0))","(coalesce(id_at_origin, 0))",
+                                "continent_id", "name"
+                        }
+                )
+        }
+)
+public class Country extends BaseBasicEntity {
+
+    @Column(name = "continent_id", nullable = false)
+    private Long continentId;
+
+    @Column(name = "name", nullable = false, length = 127)
+    private String name;
+
+    @Column(name = "sigla", length = 10)
+    private String sigla;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "continent_id", updatable = false, insertable = false)
+    private Continent continent;
+
+    protected static final long TABLE_ID = 2001L;
+    public static long getTableId() {
+        return TABLE_ID;
+    }
+}

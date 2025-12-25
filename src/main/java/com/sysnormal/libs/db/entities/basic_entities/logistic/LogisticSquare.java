@@ -1,0 +1,39 @@
+package com.sysnormal.libs.db.entities.basic_entities.logistic;
+
+import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(
+        name = "logistic_squares",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "logistic_squares_u1",
+                        columnNames = {
+                                "(coalesce(parent_id, 0))","status_reg_id","data_origin_id","(coalesce(table_origin_id, 0))","(coalesce(id_at_origin, 0))",
+                                "logistic_route_id", "name"
+                        }
+                )
+        }
+)
+public class LogisticSquare extends BaseBasicEntity {
+
+    @Column(name = "logistic_route_id", nullable = false)
+    private Long logisticRouteId;
+
+    @Column(name = "name", nullable = false, length = 127)
+    private String name;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "logistic_route_id", updatable = false, insertable = false)
+    private LogisticRoute logisticRoute;
+
+    protected static final long TABLE_ID = 2021L;
+    public static long getTableId() {
+        return TABLE_ID;
+    }
+}

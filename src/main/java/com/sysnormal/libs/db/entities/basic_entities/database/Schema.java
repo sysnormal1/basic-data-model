@@ -1,0 +1,51 @@
+package com.sysnormal.libs.db.entities.basic_entities.database;
+
+import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.Check;
+import org.hibernate.annotations.ColumnDefault;
+
+@Getter
+@Setter
+@Entity
+@Table(
+        name = "schemas",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "schemas_u1",
+                        columnNames = {
+                                "(coalesce(parent_id, 0))","status_reg_id","data_origin_id","(coalesce(table_origin_id, 0))","(coalesce(id_at_origin, 0))",
+                                "name"
+                        }
+                )
+        }
+)
+public class Schema extends BaseBasicEntity {
+
+    @Column(name = "name", nullable = false, length = 127)
+    private String name;
+
+    @Column(name = "description", length = Integer.MAX_VALUE)
+    private String description;
+
+    @Column(name = "default_connection_id")
+    private Long defaultConnectionId;
+
+    @Column(name = "is_default", nullable = false, length = 1)
+    @ColumnDefault("0")
+    @Check(constraints = "is_default in (0,1)")
+    private byte isDefault = 0;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "default_connection_id", updatable = false, insertable = false)
+    private Connection connection;
+
+    protected static final long TABLE_ID = 12;
+    public static long getTableId() {
+        return TABLE_ID;
+    }
+
+
+}
