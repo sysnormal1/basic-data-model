@@ -47,7 +47,7 @@ public class ProjectItemOriginType extends BaseBasicEntity<ProjectItemOriginType
     }
 
     public static final long SYSTEM_ID = 0;
-    public static final long USER_ID = 1;
+    public static final long AGENT_ID = 1;
 
     public static final ProjectItemOriginType SYSTEM = new ProjectItemOriginType(){{
         setId(SYSTEM_ID);
@@ -56,10 +56,10 @@ public class ProjectItemOriginType extends BaseBasicEntity<ProjectItemOriginType
         setIsSystem((byte) 1);
     }};
 
-    public static final ProjectItemOriginType USER = new ProjectItemOriginType(){{
-        setId(USER_ID);
+    public static final ProjectItemOriginType AGENT = new ProjectItemOriginType(){{
+        setId(AGENT_ID);
         setIsSysRec((byte) 1);
-        setName("USER");
+        setName("AGENT");
         setIsSystem((byte) 0);
     }};
 

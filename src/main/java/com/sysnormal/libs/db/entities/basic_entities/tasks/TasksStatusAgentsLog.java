@@ -11,12 +11,12 @@ import org.hibernate.annotations.OnDeleteAction;
 @Setter
 @Entity
 @Table(
-        name = "tasks_status_users_logs"
+        name = "tasks_status_agents_logs"
 )
-public class TasksStatusUserLog extends BaseBasicEntity<TasksStatusUserLog> {
+public class TasksStatusAgentsLog extends BaseBasicEntity<TasksStatusAgentsLog> {
 
-    @Column(name = "task_status_user_id", nullable = false)
-    private Long taskStatusUserId;
+    @Column(name = "task_status_agent_id", nullable = false)
+    private Long taskStatusAgentId;
 
     @Column(name = "operation", nullable = false, length = 50)
     private String operation;
@@ -29,9 +29,9 @@ public class TasksStatusUserLog extends BaseBasicEntity<TasksStatusUserLog> {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "task_status_user_id", updatable = false, insertable = false)
+    @JoinColumn(name = "task_status_agent_id", updatable = false, insertable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private TaskStatusUser taskStatusUser;
+    private TaskStatusAgents taskStatusAgent;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "old_status_id", updatable = false, insertable = false)

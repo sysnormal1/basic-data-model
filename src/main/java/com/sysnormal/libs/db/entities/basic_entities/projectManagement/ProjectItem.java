@@ -28,8 +28,8 @@ public class ProjectItem extends BaseBasicEntity<ProjectItem> {
     private Long projectItemTypeId = ProjectItemType.REQUIREMENTS_ID;
 
     @Column(name = "project_item_origin_id",nullable = false)
-    @ColumnDefault(ProjectItemOriginType.USER_ID+ "")
-    private Long projectItemOriginId = ProjectItemOriginType.USER_ID;
+    @ColumnDefault(ProjectItemOriginType.AGENT_ID + "")
+    private Long projectItemOriginId = ProjectItemOriginType.AGENT_ID;
 
     @Column(name = "identifier", nullable = false, length = 127)
     private String identifier;

@@ -53,6 +53,9 @@ public class Agent extends BaseBasicEntity<Agent> {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "alias")
+    private String alias;
+
     @Column(name = "last_token")
     private String lastToken;
 

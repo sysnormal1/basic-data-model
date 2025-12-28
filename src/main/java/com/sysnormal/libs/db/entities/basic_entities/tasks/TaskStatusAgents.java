@@ -1,12 +1,11 @@
-package com.sysnormal.libs.db.entities.basic_entities.projectManagement;
+package com.sysnormal.libs.db.entities.basic_entities.tasks;
 
 import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
 import com.sysnormal.libs.db.entities.basic_entities.agents.Agent;
-import com.sysnormal.libs.db.entities.basic_entities.tasks.Task;
-import com.sysnormal.libs.db.entities.basic_entities.tasks.TaskStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Check;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -18,19 +17,20 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table(
-        name = "project_tasks_status_agents",
+        name = "tasks_status_agents",
         uniqueConstraints = {
                 @UniqueConstraint(
-                        name = "project_tasks_status_agents_u1",
+                        name = "tasks_status_agents_u1",
                         columnNames = {
                                 "(coalesce(parent_id, 0))","status_reg_id","data_origin_id","(coalesce(table_origin_id, 0))","(coalesce(id_at_origin, 0))",
                                 "task_id",
-                                "agent_id"
+                                "agent_id",
+                                "status_id"
                         }
                 )
         }
 )
-public class ProjectTaskStatusUser extends BaseBasicEntity<ProjectTaskStatusUser> {
+public class TaskStatusAgents extends BaseBasicEntity<TaskStatusAgents> {
 
     @Column(name = "task_id", nullable = false)
     private Long taskId;
@@ -42,8 +42,8 @@ public class ProjectTaskStatusUser extends BaseBasicEntity<ProjectTaskStatusUser
     @ColumnDefault(TaskStatus.NOT_STARTED_ID + "")
     private Long statusId = TaskStatus.NOT_STARTED_ID;
 
-    @Column(name = "triggering_id")
-    private Long triggeringId;
+    @Column(name = "triggering_task_id")
+    private Long triggeringTaskId;
 
     @Column(name = "forecast_start_moment")
     private LocalDateTime forecastStartMoment;
@@ -63,6 +63,11 @@ public class ProjectTaskStatusUser extends BaseBasicEntity<ProjectTaskStatusUser
     @Column(name = "accumulated_time")
     private BigInteger accumulatedTime;
 
+    @Column(name = "is_owner", nullable = false)
+    @ColumnDefault("1")
+    @Check(constraints = "is_owner in (0,1)")
+    private byte isOwner = 1;
+
     @Column(name = "notes")
     private String notes;
 
@@ -73,19 +78,18 @@ public class ProjectTaskStatusUser extends BaseBasicEntity<ProjectTaskStatusUser
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "agent_id", insertable = false, updatable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     private Agent agent;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_id", insertable = false, updatable = false)
-    private TaskStatus status;
+    private TaskStatus taskStatus;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "triggering_id", insertable = false, updatable = false)
+    @JoinColumn(name = "triggering_task_id", insertable = false, updatable = false)
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    private ProjectTaskStatusUser triggering;
+    private Task triggeringTask;
 
-    protected static final long TABLE_ID = 15152;
+    protected static final long TABLE_ID = 15150;
     public static long getTableId() {
         return TABLE_ID;
     }
