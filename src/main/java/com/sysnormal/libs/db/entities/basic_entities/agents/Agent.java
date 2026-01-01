@@ -31,7 +31,8 @@ import org.hibernate.annotations.ColumnDefault;
 public class Agent extends BaseBasicEntity<Agent> {
 
     @Column(name = "identifier_type_id", nullable = false)
-    private Long identifierTypeId;
+    @ColumnDefault(IdentifierType.EMAIL_ID + "")
+    private Long identifierTypeId = IdentifierType.EMAIL_ID;
 
     @Column(name = "identitier", nullable = false)
     private String identitier;

@@ -44,6 +44,7 @@ public class IdentifierType extends BaseBasicEntity<IdentifierType> {
     public static final long CNPJ_ID = 3;
     public static final long CPF_ID = 4;
     public static final long CHAVENFE_ID = 5;
+    public static final long EMAIL_ID = 6;
     public static final long GTIN_ID = 10;
     public static final long GTINTYPE_ID = 11;
     public static final long PLATE_ID = 12;
@@ -77,6 +78,11 @@ public class IdentifierType extends BaseBasicEntity<IdentifierType> {
         setId(CHAVENFE_ID);
         setIsSysRec((byte) 1);
         setName("CHAVENFE");
+    }};
+    public static final IdentifierType EMAIL = new IdentifierType(){{
+        setId(EMAIL_ID);
+        setIsSysRec((byte) 1);
+        setName("EMAIL");
     }};
     public static final IdentifierType GTIN = new IdentifierType(){{
         setId(GTIN_ID);
