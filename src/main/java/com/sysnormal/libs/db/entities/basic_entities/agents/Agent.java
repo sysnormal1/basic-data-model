@@ -23,7 +23,7 @@ import org.hibernate.annotations.ColumnDefault;
                             people only is differenced by identifier doc type and document, not by origin
                             "(coalesce(parent_id, 0))","status_reg_id","data_origin_id","(coalesce(table_origin_id, 0))","(coalesce(id_at_origin, 0))",
                              */
-                            "identifier_type_id", "identitier"
+                            "identifier_type_id", "identifier"
                         }
                 )
         }
@@ -34,8 +34,8 @@ public class Agent extends BaseBasicEntity<Agent> {
     @ColumnDefault(IdentifierType.EMAIL_ID + "")
     private Long identifierTypeId = IdentifierType.EMAIL_ID;
 
-    @Column(name = "identitier", nullable = false)
-    private String identitier;
+    @Column(name = "identifier", nullable = false)
+    private String identifier;
 
     @Column(name = "people_id")
     private Long peopleId;
