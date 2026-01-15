@@ -1,10 +1,10 @@
 package com.sysnormal.libs.db.entities.basic_entities;
 
 import com.sysnormal.libs.db.entities.base_entities.BaseCommonEntityWithParent;
-import com.sysnormal.libs.db.entities.basic_entities.agents.Agent;
-import com.sysnormal.libs.db.entities.basic_entities.commons.DataOrigin;
-import com.sysnormal.libs.db.entities.basic_entities.commons.RecordStatus;
-import com.sysnormal.libs.db.entities.basic_entities.database.Tables;
+import com.sysnormal.libs.db.entities.basic_entities.agents.agent.Agent;
+import com.sysnormal.libs.db.entities.basic_entities.database.tables.Tables;
+import com.sysnormal.libs.db.entities.basic_entities.records.dataOrigin.DataOrigin;
+import com.sysnormal.libs.db.entities.basic_entities.records.recordStatus.RecordStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -52,5 +52,6 @@ public abstract class BaseBasicEntity<T extends BaseBasicEntity<T>>  extends Bas
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "table_origin_id", insertable = false, updatable = false)
     private Tables tableOrigin;
+
 
 }

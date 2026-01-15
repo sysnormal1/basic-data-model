@@ -42,8 +42,9 @@ Add this dependency to your application’s `pom.xml`:
 
 ## 🔧 Usage Example
 Importing an entity
+
 ````java
-import com.sysnormal.libs.db.entities.basic_entities.agents.Agent;
+import com.sysnormal.libs.db.entities.basic_entities.agents.agent.Agent;
 
 @Service
 public class AgentService {

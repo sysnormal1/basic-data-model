@@ -1,6 +1,7 @@
 package com.sysnormal.libs.db.entities.basic_entities.people;
 
 import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
+import com.sysnormal.libs.db.entities.basic_entities.people.people.People;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
