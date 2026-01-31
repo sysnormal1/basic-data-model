@@ -53,16 +53,16 @@ public class Scheduler extends BaseBasicEntity<Scheduler> {
     @Column(name = "query_column_data",  length = 127)
     private String queryColumnData;
 
-    @Column(name = "expression",  length = 4000)
+    @Column(name = "expression",  length = Integer.MAX_VALUE)
     private String expression;
 
-    @Column(name = "query_if_expression_is_true",  length = 4000)
+    @Column(name = "query_if_expression_is_true",  length = Integer.MAX_VALUE)
     private String queryIfExpressionIsTrue;
 
-    @Column(name = "query_if_expression_is_false",  length = 4000)
+    @Column(name = "query_if_expression_is_false",  length = Integer.MAX_VALUE)
     private String queryIfExpressionIsFalse;
 
-    @Column(name = "output_file_path", length = 1024)
+    @Column(name = "output_file_path", length = Integer.MAX_VALUE)
     private String outputFilePath;
 
     @Column(name = "output_file_name", length = 127)

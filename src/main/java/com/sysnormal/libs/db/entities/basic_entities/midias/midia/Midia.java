@@ -33,7 +33,7 @@ public class Midia extends BaseBasicEntity<Midia> {
     @Column(name = "type", length = 127)
     private String type;
 
-    @Column(name = "local_path", length = 4000)
+    @Column(name = "local_path", length = Integer.MAX_VALUE)
     private String localPath;
 
     @Column(name = "content_base64", length = Integer.MAX_VALUE)

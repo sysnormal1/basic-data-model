@@ -2,6 +2,8 @@ package com.sysnormal.libs.db.entities.basic_entities.agents.agent;
 
 import com.sysnormal.libs.db.entities.basic_entities.BaseBasicEntity;
 import com.sysnormal.libs.db.entities.basic_entities.commons.identifierType.IdentifierType;
+import com.sysnormal.libs.db.entities.basic_entities.people.collaborators.collaborator.Collaborator;
+import com.sysnormal.libs.db.entities.basic_entities.people.people.People;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,15 +40,32 @@ public class Agent extends BaseBasicEntity<Agent> {
     @Column(name = "email",length = 512)
     private String email;
 
+    @Column(name = "access_profile_id")
+    private Long accessProfileId;
+
+    @Column(name = "people_id")
+    private Long peopleId;
+
+    @Column(name = "collaborator_id")
+    private Long collaboratorId;
+
     @Column(name = "alias")
     private String alias;
 
-    @Column(name = "notes", length = 1000)
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "identifier_type_id", nullable = false, updatable = false, insertable = false)
     private IdentifierType identifierType;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "people_id", updatable = false, insertable = false)
+    private People people;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "collaborator_id", updatable = false, insertable = false)
+    private Collaborator collaborator;
 
      protected static final long TABLE_ID = 120L;
 

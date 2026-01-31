@@ -25,10 +25,10 @@ public class IdentifierType extends BaseBasicEntity<IdentifierType> {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "description", length = 1000)
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    @Column(name = "process_to_validate", length = 1000)
+    @Column(name = "process_to_validate", length = Integer.MAX_VALUE)
     private String processToValidate;
 
     protected static final long TABLE_ID = 70L;

@@ -51,10 +51,10 @@ public class Isic extends BaseBasicEntity<Isic> {
     @Column(name = "subclass")
     private Short subclass;
 
-    @Column(name = "description", nullable = false, length = 1000)
+    @Column(name = "description", nullable = false, length = 4000)
     private String description;
 
-    @Column(name = "notes", length = 1000)
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

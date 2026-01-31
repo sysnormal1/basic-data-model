@@ -27,7 +27,7 @@ public class RecordStatus extends BaseBasicEntity<RecordStatus> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description", length = 1000)
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "is_active", nullable = false)

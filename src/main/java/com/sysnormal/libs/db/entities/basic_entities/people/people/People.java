@@ -95,7 +95,7 @@ public class People extends BaseBasicEntity<People> {
     @Column(name = "business_network_id")
     private Long businessNetworkId;
 
-    @Column(name = "notes", length = 1000)
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

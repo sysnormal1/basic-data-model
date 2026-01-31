@@ -26,7 +26,7 @@ public class FormType extends BaseBasicEntity<FormType> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "path", length = 2000)
+    @Column(name = "path", length = Integer.MAX_VALUE)
     private String path;
 
     protected static final long TABLE_ID = 1031;

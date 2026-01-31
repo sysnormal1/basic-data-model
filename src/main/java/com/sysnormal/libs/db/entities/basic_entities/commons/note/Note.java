@@ -39,7 +39,7 @@ public class Note extends BaseBasicEntity<Note> {
     @Column(name = "notes_type", nullable = false, length = 127)
     private String notesType = "notes";
 
-    @Column(name = "notes", nullable = false, length = 2000)
+    @Column(name = "notes", nullable = false, length = Integer.MAX_VALUE)
     private String notes;
 
     @Column(name = "reference_start_at")
