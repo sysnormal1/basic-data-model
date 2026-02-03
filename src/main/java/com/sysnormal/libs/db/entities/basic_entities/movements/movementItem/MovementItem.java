@@ -40,6 +40,7 @@ import java.time.LocalDateTime;
         indexes = {
                 @Index(name = "idx_movement_items_for_origin", columnList = "data_origin_id,table_origin_id,id_at_origin"),
                 @Index(name = "idx_movement_items_customized_report_base", columnList = "movement_id,status_reg_id,canceled_at,deleted_at"),
+                @Index(name = "idx_movement_id_at_origin", columnList = "id_at_origin")
         }
 )
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -84,9 +85,9 @@ public class MovementItem extends BaseBasicEntity<MovementItem> {
     @ColumnDefault("0")
     private BigDecimal unPrice = BigDecimal.ZERO;
 
-    @Column(name = "un_sold_cust", nullable = false, precision = 32, scale = 10)
+    @Column(name = "un_sold_cost", nullable = false, precision = 32, scale = 10)
     @ColumnDefault("0")
-    private BigDecimal unSoldCust = BigDecimal.ZERO;
+    private BigDecimal unSoldCost = BigDecimal.ZERO;
 
     @Column(name = "mov_started_at")
     private LocalDateTime movStartedAt;
