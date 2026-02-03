@@ -84,9 +84,9 @@ public class MovementItem extends BaseBasicEntity<MovementItem> {
     @ColumnDefault("0")
     private BigDecimal unPrice = BigDecimal.ZERO;
 
-    @Column(name = "un_product_sold_cust", nullable = false, precision = 32, scale = 10)
+    @Column(name = "un_sold_cust", nullable = false, precision = 32, scale = 10)
     @ColumnDefault("0")
-    private BigDecimal unProductSoldCust = BigDecimal.ZERO;
+    private BigDecimal unSoldCust = BigDecimal.ZERO;
 
     @Column(name = "mov_started_at")
     private LocalDateTime movStartedAt;
