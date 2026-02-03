@@ -46,7 +46,7 @@ public class LogisticLog extends BaseBasicEntity<LogisticLog> {
     @Column(name = "longitude", precision = 38, scale = 10)
     private BigDecimal longitude;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

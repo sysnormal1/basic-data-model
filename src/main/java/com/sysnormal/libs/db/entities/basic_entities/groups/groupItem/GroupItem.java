@@ -39,7 +39,7 @@ public class GroupItem extends BaseBasicEntity<GroupItem> {
     @Check(constraints = "is_manual_included in (0,1)")
     private byte isManualIncluded = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

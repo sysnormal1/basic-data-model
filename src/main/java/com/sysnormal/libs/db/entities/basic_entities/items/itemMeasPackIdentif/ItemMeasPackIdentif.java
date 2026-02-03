@@ -80,7 +80,7 @@ public class ItemMeasPackIdentif extends BaseBasicEntity<ItemMeasPackIdentif> {
     @ColumnDefault("1")
     private Long numericOrder = 1L;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

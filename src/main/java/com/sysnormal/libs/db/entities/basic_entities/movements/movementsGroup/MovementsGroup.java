@@ -41,7 +41,7 @@ public class MovementsGroup extends BaseBasicEntity<MovementsGroup> {
     @ColumnDefault("0")
     private Integer precedence = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

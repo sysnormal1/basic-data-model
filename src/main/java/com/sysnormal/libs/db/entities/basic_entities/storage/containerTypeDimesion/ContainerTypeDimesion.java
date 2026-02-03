@@ -42,7 +42,7 @@ public class ContainerTypeDimesion extends BaseBasicEntity<ContainerTypeDimesion
     @ColumnDefault("0")
     private BigDecimal value = BigDecimal.ZERO;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

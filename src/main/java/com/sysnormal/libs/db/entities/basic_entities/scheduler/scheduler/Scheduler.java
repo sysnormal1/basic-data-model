@@ -99,7 +99,7 @@ public class Scheduler extends BaseBasicEntity<Scheduler> {
     @Max(59)
     private Integer runMinuteAt = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     protected static final long TABLE_ID = 18000;

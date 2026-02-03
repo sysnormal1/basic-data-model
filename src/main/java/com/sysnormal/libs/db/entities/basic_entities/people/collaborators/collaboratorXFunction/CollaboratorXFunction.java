@@ -46,7 +46,7 @@ public class CollaboratorXFunction extends BaseBasicEntity<CollaboratorXFunction
     @Check(constraints = "is_time_controlled in (0,1)")
     private Integer isTimeControlled = 1;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

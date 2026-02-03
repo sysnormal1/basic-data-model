@@ -84,6 +84,10 @@ public class MovementItem extends BaseBasicEntity<MovementItem> {
     @ColumnDefault("0")
     private BigDecimal unPrice = BigDecimal.ZERO;
 
+    @Column(name = "un_product_sold_cust", nullable = false, precision = 32, scale = 10)
+    @ColumnDefault("0")
+    private BigDecimal unProductSoldCust = BigDecimal.ZERO;
+
     @Column(name = "mov_started_at")
     private LocalDateTime movStartedAt;
 
@@ -112,7 +116,7 @@ public class MovementItem extends BaseBasicEntity<MovementItem> {
     @Column(name = "canceled_at")
     private LocalDateTime canceledAt;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

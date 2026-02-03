@@ -37,7 +37,7 @@ public class ItemLotContainer extends BaseBasicEntity<ItemLotContainer> {
     @Column(name = "container_id")
     private Long containerId;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

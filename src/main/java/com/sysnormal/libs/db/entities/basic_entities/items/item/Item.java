@@ -56,7 +56,7 @@ public class Item extends BaseBasicEntity<Item> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "net_weight_un", precision = 32, scale = 12)
@@ -80,7 +80,7 @@ public class Item extends BaseBasicEntity<Item> {
     @Column(name = "item_category_origin_id")
     private Long itemCategoryOriginId;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

@@ -90,7 +90,7 @@ public class Permission extends BaseBasicEntity<Permission> {
     @Check(constraints = "allowed_delete in (0,1)")
     private byte allowedDelete = 1;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

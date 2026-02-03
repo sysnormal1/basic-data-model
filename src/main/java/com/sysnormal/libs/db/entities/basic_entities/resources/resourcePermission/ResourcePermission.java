@@ -74,7 +74,7 @@ public class ResourcePermission extends BaseBasicEntity<ResourcePermission> {
     @Column(name = "condition", length = Integer.MAX_VALUE)
     private String condition;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -40,7 +40,7 @@ public class PeopleContact extends BaseBasicEntity<PeopleContact> {
     @Column(name = "numeric_order")
     private Integer numericOrder;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

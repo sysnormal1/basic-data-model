@@ -26,7 +26,7 @@ public class ContractType extends BaseBasicEntity<ContractType> {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     protected static final long TABLE_ID = 1020L;

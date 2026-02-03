@@ -81,7 +81,7 @@ public class Relationship extends BaseBasicEntity<Relationship> {
     @Column(name = "end_at")
     private LocalDateTime endAt;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "integer_value_1")
@@ -147,7 +147,7 @@ public class Relationship extends BaseBasicEntity<Relationship> {
     @Column(name = "date_value_3")
     private LocalDateTime dateValue3;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

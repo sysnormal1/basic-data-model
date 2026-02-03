@@ -30,7 +30,7 @@ public class Parameter extends BaseBasicEntity<Parameter> {
     @Column(name = "name", length = 127, nullable = false)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "default_value", length = 127)

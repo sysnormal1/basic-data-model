@@ -32,7 +32,7 @@ public class TaskStatus extends BaseBasicEntity<TaskStatus> {
     @Column(name = "sigla", length = 10)
     private String sigla;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "is_running", nullable = false)

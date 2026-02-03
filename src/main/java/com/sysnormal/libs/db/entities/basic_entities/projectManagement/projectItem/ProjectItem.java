@@ -40,10 +40,10 @@ public class ProjectItem extends BaseBasicEntity<ProjectItem> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

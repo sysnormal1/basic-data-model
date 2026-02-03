@@ -30,7 +30,7 @@ public class ListName extends BaseBasicEntity<ListName> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "integer_value_1")
@@ -96,7 +96,7 @@ public class ListName extends BaseBasicEntity<ListName> {
     @Column(name = "date_value_3")
     private LocalDateTime dateValue3;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     protected static final long TABLE_ID = 1004;

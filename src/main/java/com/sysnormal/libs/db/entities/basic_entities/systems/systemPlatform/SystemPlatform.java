@@ -28,7 +28,7 @@ public class SystemPlatform extends BaseBasicEntity<SystemPlatform> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "is_desktop", nullable = false)
@@ -46,7 +46,7 @@ public class SystemPlatform extends BaseBasicEntity<SystemPlatform> {
     @Check(constraints = "is_mobile in (0,1)")
     private byte isMobile = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     protected static final long TABLE_ID = 201;

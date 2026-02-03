@@ -82,7 +82,7 @@ public class ItemMovAmount extends BaseBasicEntity<ItemMovAmount> {
     @ColumnDefault("0")
     private BigDecimal movedAmt = BigDecimal.ZERO;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

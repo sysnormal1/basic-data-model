@@ -26,10 +26,10 @@ public class ProjectTaskType extends BaseBasicEntity<ProjectTaskType> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     protected static final long TABLE_ID = 15050;

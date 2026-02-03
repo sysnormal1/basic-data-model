@@ -54,7 +54,7 @@ public class LogisticOrderDestValue extends BaseBasicEntity<LogisticOrderDestVal
     @ColumnDefault("1")
     private Integer numericOrder = 1;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

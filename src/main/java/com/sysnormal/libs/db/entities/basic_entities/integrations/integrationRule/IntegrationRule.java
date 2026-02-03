@@ -31,7 +31,7 @@ public class IntegrationRule extends BaseBasicEntity<IntegrationRule> {
     @Column(name = "name", nullable = false,length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "table_id", nullable = false)
@@ -71,7 +71,7 @@ public class IntegrationRule extends BaseBasicEntity<IntegrationRule> {
     @Check(constraints = "check_on_delete in (0,1)")
     private byte checkOnDelete = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

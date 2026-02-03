@@ -72,7 +72,7 @@ public class ReportDataFountItem extends BaseBasicEntity<ReportDataFountItem> {
     @Check(constraints = "value_groupment in (0,1)")
     private byte valueGroupment = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

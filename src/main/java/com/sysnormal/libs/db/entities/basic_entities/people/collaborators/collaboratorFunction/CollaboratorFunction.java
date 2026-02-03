@@ -38,7 +38,7 @@ public class CollaboratorFunction extends BaseBasicEntity<CollaboratorFunction> 
     @Check(constraints = "is_time_controlled in (0,1)")
     private Integer isTimeControlled = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     protected static final long TABLE_ID = 6001L;

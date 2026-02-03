@@ -64,7 +64,7 @@ public class ProjectTaskStatusAgent extends BaseBasicEntity<ProjectTaskStatusAge
     @Column(name = "accumulated_time")
     private BigInteger accumulatedTime;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

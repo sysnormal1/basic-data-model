@@ -36,10 +36,10 @@ public class System extends BaseBasicEntity<System> {
     @Column(name = "name", length = 127, nullable = false)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

@@ -42,7 +42,7 @@ public class ContainerTypeCapacity extends BaseBasicEntity<ContainerTypeCapacity
     @ColumnDefault("0")
     private BigDecimal capacity = BigDecimal.ZERO;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

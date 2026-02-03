@@ -39,7 +39,7 @@ public class PostalCodeStreet extends BaseBasicEntity<PostalCodeStreet> {
     @Column(name = "street_id",nullable = false)
     private Long streetId;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

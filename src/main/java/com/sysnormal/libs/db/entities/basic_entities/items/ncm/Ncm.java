@@ -78,7 +78,7 @@ public class Ncm extends BaseBasicEntity<Ncm> {
     @Column(name = "start_act_year", length = 4)
     private Integer startActYear;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     protected static final long TABLE_ID = 8008L;

@@ -28,7 +28,7 @@ public class ReportVision extends BaseBasicEntity<ReportVision> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "is_visible", nullable = false, length = 1)

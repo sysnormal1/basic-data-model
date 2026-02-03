@@ -89,7 +89,7 @@ public class ItemMovUnit extends BaseBasicEntity<ItemMovUnit> {
     @Column(name = "variable_moved_amt", precision = 38, scale = 10)
     private BigDecimal variableMovedAmt;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

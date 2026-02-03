@@ -59,7 +59,7 @@ public class WarehouseAddress extends BaseBasicEntity<WarehouseAddress> {
     @Check(constraints = "is_disponible in (0,1)")
     private byte isDisponible = 1;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

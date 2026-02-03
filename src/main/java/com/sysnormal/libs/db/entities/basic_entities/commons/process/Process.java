@@ -26,7 +26,7 @@ public class Process extends BaseBasicEntity<Process> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     protected static final long TABLE_ID = 200;

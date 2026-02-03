@@ -52,7 +52,7 @@ public class Condition extends BaseBasicEntity<Condition> {
     @Column(name = "end_at")
     private LocalDateTime endAt;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

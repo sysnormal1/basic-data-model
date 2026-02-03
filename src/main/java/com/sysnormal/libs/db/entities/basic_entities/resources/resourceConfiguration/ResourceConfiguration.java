@@ -42,7 +42,7 @@ public class ResourceConfiguration extends BaseBasicEntity<ResourceConfiguration
     @Column(name = "configurations", length = Integer.MAX_VALUE)
     private String configurations;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -48,7 +48,7 @@ public class Container extends BaseBasicEntity<Container> {
     @Check(constraints = "allow_multiple_addresses in (0,1)")
     private byte isDefault = 0;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

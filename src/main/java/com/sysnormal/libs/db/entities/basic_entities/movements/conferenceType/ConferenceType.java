@@ -28,7 +28,7 @@ public class ConferenceType extends BaseBasicEntity<ConferenceType> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "cega", nullable = false)

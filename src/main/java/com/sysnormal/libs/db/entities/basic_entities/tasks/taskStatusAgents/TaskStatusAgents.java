@@ -71,7 +71,7 @@ public class TaskStatusAgents extends BaseBasicEntity<TaskStatusAgents> {
     @Check(constraints = "is_owner in (0,1)")
     private byte isOwner = 1;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

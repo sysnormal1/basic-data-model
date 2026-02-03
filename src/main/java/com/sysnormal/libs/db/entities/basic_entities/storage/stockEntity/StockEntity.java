@@ -66,7 +66,7 @@ public class StockEntity extends BaseBasicEntity<StockEntity> {
     @ColumnDefault("1")
     private int precedence = 1;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 

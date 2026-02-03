@@ -37,7 +37,7 @@ public class ParameterValue extends BaseBasicEntity<ParameterValue> {
     @Column(name = "register_id")
     private Long registerId;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
     @Column(name = "value", length = 127)

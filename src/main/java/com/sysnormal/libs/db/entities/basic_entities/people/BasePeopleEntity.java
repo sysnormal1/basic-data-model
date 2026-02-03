@@ -19,7 +19,7 @@ public abstract class BasePeopleEntity<T extends BasePeopleEntity<T>>  extends B
     @Column(name = "alias")
     private String alias;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY)

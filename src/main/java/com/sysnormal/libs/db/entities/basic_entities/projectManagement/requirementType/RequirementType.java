@@ -28,10 +28,10 @@ public class RequirementType extends BaseBasicEntity<RequirementType> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
     @Column(name = "is_functional", nullable = false)

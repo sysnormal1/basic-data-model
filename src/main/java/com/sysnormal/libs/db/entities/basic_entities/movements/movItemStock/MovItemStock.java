@@ -61,7 +61,7 @@ public class MovItemStock extends BaseBasicEntity<MovItemStock> {
     @ColumnDefault("0")
     private Long precedence = 0L;
 
-    @Column(name = "notes")
+    @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
 
