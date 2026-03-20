@@ -1,0 +1,75 @@
+package com.sysnormal.data.basic_data_model.entities.movements.movementEntity;
+
+import com.sysnormal.data.basic_data_model.entities.BaseBasicEntity;
+import com.sysnormal.data.basic_data_model.entities.movements.movement.Movement;
+import com.sysnormal.data.basic_data_model.entities.movements.movementEntityRelationshipType.MovementEntityRelationshipType;
+import com.sysnormal.data.basic_data_model.entities.storage.stockEntity.StockEntity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+/**
+ * Entity class
+ */
+@Getter
+@Setter
+@Entity
+@Table(
+        name = "movements_entities",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "movements_entities_u1",
+                        columnNames = {
+                                "(coalesce(parent_id, -1))","status_reg_id","data_origin_id","(coalesce(table_origin_id, -1))","(coalesce(id_at_origin, -1))",
+                                "mov_id",
+                                "movement_relationship_type_id",
+                                "stock_entity_id"
+                        }
+                )
+        }
+)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class MovementEntity extends BaseBasicEntity<MovementEntity> {
+
+    @Column(name = "mov_id", nullable = false)
+    private Long movId;
+
+    @Column(name = "movement_relationship_type_id", nullable = false)
+    private Long movementRelationshipTypeId;
+
+    @Column(name = "stock_entity_id", nullable = false)
+    private Long stockEntityId;
+
+    @Column(name = "numeric_order", nullable = false)
+    @ColumnDefault("0")
+    private Integer numericOrder = 0;
+
+    @Column(name = "precedence", nullable = false)
+    @ColumnDefault("0")
+    private Integer precedence = 0;
+
+    @Column(name = "notes", length = Integer.MAX_VALUE)
+    private String notes;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "mov_id", insertable = false, updatable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Movement movement;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "movement_relationship_type_id", insertable = false, updatable = false)
+    private MovementEntityRelationshipType movementRelationshipType;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "stock_entity_id", insertable = false, updatable = false)
+    private StockEntity stockEntity;
+
+    protected static final long TABLE_ID = 9021;
+    public static long getTableId() {
+        return TABLE_ID;
+    }
+
+}

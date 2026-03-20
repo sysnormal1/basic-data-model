@@ -1,0 +1,67 @@
+package com.sysnormal.data.basic_data_model.entities.financial.currency;
+
+import com.sysnormal.data.basic_data_model.entities.BaseBasicEntity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.Check;
+import org.hibernate.annotations.ColumnDefault;
+
+/**
+ * Entity class
+ */
+@Getter
+@Setter
+@Entity
+@Table(
+        name = "currencies",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "currencies_u1",
+                        columnNames = {
+                                "(coalesce(parent_id, -1))","status_reg_id","data_origin_id","(coalesce(table_origin_id, -1))","(coalesce(id_at_origin, -1))",
+                                "name"
+                        }
+                )
+        }
+)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class Currency extends BaseBasicEntity<Currency> {
+
+    @Column(name = "name", nullable = false, length = 127)
+    private String name;
+
+    @Column(name = "description", length = Integer.MAX_VALUE)
+    private String description;
+
+    @Column(name = "symbol", length = 10)
+    private String symbol;
+
+    @Column(name = "is_physical", nullable = false, length = 1)
+    @ColumnDefault("1")
+    @Check(constraints = "is_physical in (0,1)")
+    private byte isPhysical = 1;
+
+    protected static final long TABLE_ID = 1030;
+    public static long getTableId() {
+        return TABLE_ID;
+    }
+
+    public static final long DOLAR_ID = 1;
+    public static final long BRL_ID = 2;
+
+    public static final Currency DOLAR = new Currency(){{
+        setId(DOLAR_ID);
+        setIsSysRec((byte) 1);
+        setName("DOLAR");
+        setSymbol("$");
+        setIsSysRec((byte) 1);
+    }};
+    public static final Currency BRL = new Currency(){{
+        setId(BRL_ID);
+        setIsSysRec((byte) 1);
+        setName("BRAZILIAN REAL");
+        setSymbol("R$");
+        setIsSysRec((byte) 1);
+    }};
+}
