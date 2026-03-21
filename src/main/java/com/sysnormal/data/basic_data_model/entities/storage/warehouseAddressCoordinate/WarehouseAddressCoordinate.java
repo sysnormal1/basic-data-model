@@ -50,10 +50,5 @@ public class WarehouseAddressCoordinate extends BaseBasicEntity<WarehouseAddress
     @JoinColumn(name = "coordinate_type_id", insertable = false, updatable = false)
     private WarehouseAddressType coordinateType;
 
-    protected static final long TABLE_ID = 3005;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

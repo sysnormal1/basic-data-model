@@ -57,11 +57,6 @@ public class MeasurementUnit extends BaseBasicEntity<MeasurementUnit> {
     @JoinColumn(name = "greatness_id", insertable = false, updatable = false)
     private Greatness greatness;
 
-    protected static final long TABLE_ID = 80L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long UN_ID = 1L;
     public static final long WT_ID = 2L; //WEIGHT

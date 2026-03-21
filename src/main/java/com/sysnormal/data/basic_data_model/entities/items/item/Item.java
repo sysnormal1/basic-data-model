@@ -115,9 +115,4 @@ public class Item extends BaseBasicEntity<Item> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_category_origin_id", insertable = false, updatable = false)
     private ItemCategoryOrigin itemCategoryOrigin;
-
-    protected static final long TABLE_ID = 8010L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

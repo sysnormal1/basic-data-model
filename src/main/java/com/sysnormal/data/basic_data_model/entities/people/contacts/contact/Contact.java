@@ -37,9 +37,4 @@ public class Contact extends BaseBasicEntity<Contact> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "contact_type_id", updatable = false, insertable = false)
     private ContactType contactType;
-
-    protected static final long TABLE_ID = 2013;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

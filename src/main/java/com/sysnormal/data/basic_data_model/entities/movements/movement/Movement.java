@@ -229,10 +229,4 @@ public class Movement extends BaseBasicEntity<Movement> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mov_ref_id", insertable = false, updatable = false)
     private Movement movRef;
-
-
-    protected static final long TABLE_ID = 9010L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

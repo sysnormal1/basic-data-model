@@ -55,10 +55,5 @@ public class Note extends BaseBasicEntity<Note> {
     @JoinColumn(name = "table_id", insertable = false, updatable = false)
     private Tables table;
 
-    protected static final long TABLE_ID = 256;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

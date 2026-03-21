@@ -100,10 +100,4 @@ public class ItemStockUnit extends BaseBasicEntity<ItemStockUnit> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "variable_unit_measure_id", insertable = false, updatable = false)
     private MeasurementUnit variableUnitMeasure;
-
-    protected static final long TABLE_ID = 8031;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

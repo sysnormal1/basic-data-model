@@ -28,9 +28,4 @@ public class BusinessLine extends BaseBasicEntity<BusinessLine> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;
-
-    protected static final long TABLE_ID = 1035L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

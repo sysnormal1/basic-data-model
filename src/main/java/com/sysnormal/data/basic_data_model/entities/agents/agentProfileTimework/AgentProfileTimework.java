@@ -41,9 +41,4 @@ public class AgentProfileTimework extends BaseBasicEntity<AgentProfileTimework> 
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Agent agent;
 
-    protected static final long TABLE_ID = 122;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

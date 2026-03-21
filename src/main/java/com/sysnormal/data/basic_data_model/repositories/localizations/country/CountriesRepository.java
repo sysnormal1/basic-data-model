@@ -12,9 +12,6 @@ import java.util.Optional;
 @Repository
 public interface CountriesRepository extends BaseBasicRepository<Country, Long> {
 
-    @Override
-    default long getTableId(){return Country.getTableId();}
-
     default String getInternationalName(String name) {
         String result = name;
         if (StringUtils.hasText(name)) {

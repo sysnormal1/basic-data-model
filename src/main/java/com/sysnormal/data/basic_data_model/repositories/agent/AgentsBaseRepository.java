@@ -7,8 +7,6 @@ import org.springframework.data.repository.NoRepositoryBean;
 @NoRepositoryBean
 public interface AgentsBaseRepository<E extends Agent, ID> extends BaseRepository<E, ID> {
 
-    @Override
-    default long getTableId(){return Agent.getTableId();}
 
 }
 

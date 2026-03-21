@@ -47,10 +47,5 @@ public class Schema extends BaseBasicEntity<Schema> {
     @JoinColumn(name = "default_connection_id", updatable = false, insertable = false)
     private Connection connection;
 
-    protected static final long TABLE_ID = 12;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

@@ -78,9 +78,4 @@ public class Address extends BaseBasicEntity<Address> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "postal_code_id", updatable = false, insertable = false)
     private PostalCode postalCode;
-
-    protected static final long TABLE_ID = 2011L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

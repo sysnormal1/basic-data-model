@@ -28,9 +28,4 @@ public class Log extends BaseEntity {
     @Column(name = "values_names", length = 2000)
     private String valuesNames;
 
-    protected static final long TABLE_ID = 2;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

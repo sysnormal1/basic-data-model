@@ -50,9 +50,4 @@ public class Tables extends BaseBasicEntity<Tables> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "schema_id", updatable = false, insertable = false)
     private Schema schema;
-
-    protected static final long TABLE_ID = 10;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

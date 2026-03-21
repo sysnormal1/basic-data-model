@@ -63,11 +63,6 @@ public class Container extends BaseBasicEntity<Container> {
     @JoinColumn(name = "identifier_type_id", updatable = false, insertable = false)
     private IdentifierType identifierType;
 
-    protected static final long TABLE_ID = 8015;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long WITHOUT_CONTEINER_ID = 1;
 
     public static final Container WITHOUT_CONTEINER = new Container(){{

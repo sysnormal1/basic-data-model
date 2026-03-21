@@ -35,11 +35,6 @@ public class ResourceType extends BaseBasicEntity<ResourceType> {
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
-    protected static final long TABLE_ID = 210;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long SYSTEM_ID = 1;
     public static final long DATA_ID = 2;
     public static final long TABLE_RESOURCE_ID = 3;

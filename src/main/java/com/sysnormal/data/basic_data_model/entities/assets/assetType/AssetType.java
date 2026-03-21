@@ -32,11 +32,6 @@ public class AssetType extends BaseBasicEntity<AssetType> {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    protected static final long TABLE_ID = 1100L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final Long VEHICLE_ID = 1L;
 
     public static final AssetType VEHICLE = new AssetType(){{

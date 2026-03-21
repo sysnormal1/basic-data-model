@@ -26,9 +26,4 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Company extends BasePeopleEntity<Company> {
 
-    protected static final long TABLE_ID = 3000L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

@@ -83,9 +83,4 @@ public class RelationshipValue extends BaseBasicEntity<RelationshipValue> {
     @JoinColumn(name = "data_type_id", insertable = false, updatable = false)
     private DataType dataType;
 
-    protected static final long TABLE_ID = 1003;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

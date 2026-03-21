@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ItemDepartmentsRepository extends BaseBasicRepository<ItemDepartment, Long> {
 
-    @Override
-    default long getTableId(){return ItemDepartment.getTableId();}
-
-}
+    }

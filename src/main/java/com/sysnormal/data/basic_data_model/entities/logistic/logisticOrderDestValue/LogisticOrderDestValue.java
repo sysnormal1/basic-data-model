@@ -78,9 +78,4 @@ public class LogisticOrderDestValue extends BaseBasicEntity<LogisticOrderDestVal
     @JoinColumn(name = "financial_value_mov_type_dest_id", insertable = false, updatable = false)
     private FinancialValueMovType financialValueMovTypeDest;
 
-    protected static final long TABLE_ID = 12007;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

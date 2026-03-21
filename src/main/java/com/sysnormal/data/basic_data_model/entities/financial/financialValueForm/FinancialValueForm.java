@@ -64,12 +64,6 @@ public class FinancialValueForm extends BaseBasicEntity<FinancialValueForm> {
     @Check(constraints = "is_bolet in (0,1)")
     private byte isBolet = 0;
 
-
-    protected static final long TABLE_ID = 1032L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long NONE_ID = 1;
     public static final long MONEY_ID = 2;

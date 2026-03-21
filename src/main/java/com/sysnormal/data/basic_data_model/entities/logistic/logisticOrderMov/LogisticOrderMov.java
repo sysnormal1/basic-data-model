@@ -95,10 +95,4 @@ public class LogisticOrderMov extends BaseBasicEntity<LogisticOrderMov> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "collected_reason_id", insertable = false, updatable = false)
     private LogisticReason collectedReason;
-
-    protected static final long TABLE_ID = 12004;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

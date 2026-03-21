@@ -42,11 +42,6 @@ public class Connection extends BaseBasicEntity<Connection> {
     @Check(constraints = "is_default in (0,1)")
     private byte isDefault = 0;
 
-    protected static final long TABLE_ID = 11;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 
 

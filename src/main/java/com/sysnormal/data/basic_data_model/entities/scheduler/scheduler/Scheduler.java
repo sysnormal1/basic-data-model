@@ -105,9 +105,4 @@ public class Scheduler extends BaseBasicEntity<Scheduler> {
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
-    protected static final long TABLE_ID = 18000;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

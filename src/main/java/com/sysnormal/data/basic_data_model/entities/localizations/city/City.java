@@ -50,9 +50,4 @@ public class City extends BaseBasicEntity<City> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "state_id", updatable = false, insertable = false)
     private State state;
-
-    protected static final long TABLE_ID = 2003L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

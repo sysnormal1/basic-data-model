@@ -32,12 +32,6 @@ public class SqlObjectType extends BaseBasicEntity<SqlObjectType> {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-
-    protected static final long TABLE_ID = 10000;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long DATABASE_ID = 1;
     public static final long USER_ID = 100;
     public static final long SCHEMA_ID = 200;

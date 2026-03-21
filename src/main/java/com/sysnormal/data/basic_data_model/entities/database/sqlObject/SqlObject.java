@@ -41,10 +41,5 @@ public class SqlObject extends BaseBasicEntity<SqlObject> {
     @JoinColumn(name = "sql_object_type_id", insertable = false, updatable = false)
     private SqlObjectType sqlObjectType;
 
-    protected static final long TABLE_ID = 10004;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

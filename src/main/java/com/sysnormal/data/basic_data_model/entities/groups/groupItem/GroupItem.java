@@ -49,10 +49,4 @@ public class GroupItem extends BaseBasicEntity<GroupItem> {
     @JoinColumn(name = "group_id", insertable = false, updatable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Group group;
-
-    protected static final long TABLE_ID = 7007;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

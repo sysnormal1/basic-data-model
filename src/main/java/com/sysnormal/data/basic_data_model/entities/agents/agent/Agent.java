@@ -70,12 +70,6 @@ public class Agent extends BaseBasicEntity<Agent> {
     @JoinColumn(name = "collaborator_id", updatable = false, insertable = false)
     private Collaborator collaborator;
 
-     protected static final long TABLE_ID = 120L;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long SYSTEM_ID = 0;
 }

@@ -46,9 +46,4 @@ public class TasksStatusAgentsLog extends BaseBasicEntity<TasksStatusAgentsLog> 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "new_status_id", updatable = false, insertable = false)
     private TaskStatus newStatus;
-
-    protected static final long TABLE_ID = 15151;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

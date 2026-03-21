@@ -9,9 +9,6 @@ import java.util.Optional;
 @Repository
 public interface CitiesRepository extends BaseBasicRepository<City, Long> {
 
-    @Override
-    default long getTableId(){return City.getTableId();}
-
     Optional<City> findByStateIdAndName(Long stateId, String name);
 
 }

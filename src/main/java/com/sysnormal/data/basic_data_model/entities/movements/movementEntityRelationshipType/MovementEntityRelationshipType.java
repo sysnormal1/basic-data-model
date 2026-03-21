@@ -54,14 +54,6 @@ public class MovementEntityRelationshipType extends BaseBasicEntity<MovementEnti
     @Check(constraints = "is_output in (0,1)")
     private byte isOutput = 0;
 
-
-
-
-    protected static final long TABLE_ID = 9020;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long ORIGIN_INPUT_ID = 1;
     public static final long TARGET_INPUT_ID = 2;
     public static final long ORIGIN_OUTPUT_ID = 3;

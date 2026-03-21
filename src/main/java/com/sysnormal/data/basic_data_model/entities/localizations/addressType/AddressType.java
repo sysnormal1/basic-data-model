@@ -29,11 +29,6 @@ public class AddressType extends BaseBasicEntity<AddressType> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    protected static final long TABLE_ID = 2007L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long RESIDENTIAL_ID = 1L;
     public static final long BUSINESS_ID = 2L;
 

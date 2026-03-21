@@ -49,10 +49,4 @@ public class ItemMovAmountRestriction extends BaseBasicEntity<ItemMovAmountRestr
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "value_name_id", insertable = false, updatable = false)
     private ValueName valueName;
-
-    protected static final long TABLE_ID = 9037;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

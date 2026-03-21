@@ -102,11 +102,6 @@ public class ListName extends BaseBasicEntity<ListName> {
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
-    protected static final long TABLE_ID = 1004;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long CATEGORIES_ITEMS_NAMES_X_NCM_ID = 1;
 
     public static final ListName CATEGORIES_ITEMS_NAMES_X_NCM = new ListName(){{

@@ -54,11 +54,6 @@ public class System extends BaseBasicEntity<System> {
     @JoinColumn(name = "system_side_id", insertable = false, updatable = false)
     private SystemSide systemSide;
 
-    protected static final long TABLE_ID = 203;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long THIS_ID = 0;
     public static final long DEFAULT_WEB_CLIENT_ID = 1;
 

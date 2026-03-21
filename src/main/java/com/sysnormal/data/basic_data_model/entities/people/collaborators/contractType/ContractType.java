@@ -32,11 +32,6 @@ public class ContractType extends BaseBasicEntity<ContractType> {
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
-    protected static final long TABLE_ID = 1020L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
     public static long REGISTERED_ID = 1;
     public static long CONTRACTED_ID = 1;

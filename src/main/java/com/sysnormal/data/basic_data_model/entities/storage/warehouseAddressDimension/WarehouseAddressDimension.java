@@ -66,10 +66,4 @@ public class WarehouseAddressDimension extends BaseBasicEntity<WarehouseAddressD
     private MeasurementUnit measurementUnit;
 
 
-    protected static final long TABLE_ID = 3006;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
-
 }

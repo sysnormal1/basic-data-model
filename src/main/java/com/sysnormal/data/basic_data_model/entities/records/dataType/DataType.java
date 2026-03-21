@@ -79,11 +79,6 @@ public class DataType extends BaseBasicEntity<DataType> {
     @Check(constraints = "is_other in (0,1)")
     private byte isOther = 0;
 
-    protected static final long TABLE_ID = 50;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long ANY_ID = 1;
     public static final long STRING_ID = 2;

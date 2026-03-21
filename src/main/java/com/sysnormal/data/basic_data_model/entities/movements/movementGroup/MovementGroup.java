@@ -37,10 +37,5 @@ public class MovementGroup extends BaseBasicEntity<MovementGroup> {
     @JoinColumn(name = "identifier_type_id", insertable = false, updatable = false)
     private IdentifierType identifierType;
 
-    protected static final long TABLE_ID = 9011;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

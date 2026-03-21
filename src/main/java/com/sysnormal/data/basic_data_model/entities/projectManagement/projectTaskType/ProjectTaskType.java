@@ -35,11 +35,6 @@ public class ProjectTaskType extends BaseBasicEntity<ProjectTaskType> {
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
-    protected static final long TABLE_ID = 15050;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long TASK_ID = 1;
     public static final long DOCUMENTATION_ID = 2;
     public static final long PLANNING_ID = 3;

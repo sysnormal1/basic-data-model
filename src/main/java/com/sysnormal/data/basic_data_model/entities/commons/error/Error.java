@@ -36,9 +36,4 @@ public class Error extends BaseEntity {
 
     @Column(name = "data", length = 2000)
     private String data;
-
-    protected static final long TABLE_ID = 1;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

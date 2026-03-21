@@ -112,9 +112,4 @@ public class LogisticOrder extends BaseBasicEntity<LogisticOrder> {
     @JoinColumn(name = "collected_reason_id", insertable = false, updatable = false)
     private LogisticReason collectedReason;
 
-    protected static final long TABLE_ID = 9005L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

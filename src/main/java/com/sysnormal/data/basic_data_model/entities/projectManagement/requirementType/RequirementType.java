@@ -42,11 +42,6 @@ public class RequirementType extends BaseBasicEntity<RequirementType> {
     @Check(constraints = "is_functional in (0,1)")
     private byte isFunctional = 1;
 
-    protected static final long TABLE_ID = 15019;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long FUNCTIONAL_ID = 1;
     public static final long NO_FUNCTIONAL_ID = 2;
 

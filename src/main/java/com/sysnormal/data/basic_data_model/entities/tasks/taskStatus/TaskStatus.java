@@ -63,11 +63,6 @@ public class TaskStatus extends BaseBasicEntity<TaskStatus> {
     @Check(constraints = "is_visible in (0,1)")
     private byte isVisible = 1;
 
-    protected static final long TABLE_ID = 15100;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long NOT_STARTED_ID = 1;
     public static final long RUNNING_ID = 2;
     public static final long STOPPED_ID = 3;

@@ -41,9 +41,4 @@ public class WarehouseAddressType extends BaseBasicEntity<WarehouseAddressType> 
     @Check(constraints = "is_passable in (0,1)")
     private byte isPassable = 0;
 
-    protected static final long TABLE_ID = 3003;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

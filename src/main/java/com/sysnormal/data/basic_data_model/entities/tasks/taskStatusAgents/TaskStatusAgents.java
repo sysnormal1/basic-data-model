@@ -95,9 +95,4 @@ public class TaskStatusAgents extends BaseBasicEntity<TaskStatusAgents> {
     @OnDelete(action = OnDeleteAction.SET_NULL)
     private Task triggeringTask;
 
-    protected static final long TABLE_ID = 15150;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

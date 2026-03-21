@@ -65,9 +65,4 @@ public class PostalCodePath extends BaseBasicEntity<PostalCodePath> {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private PostalCodeStreet postalCodeStreet;
 
-    protected static final long TABLE_ID = 2010;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

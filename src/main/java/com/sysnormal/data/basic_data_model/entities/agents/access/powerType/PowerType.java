@@ -32,11 +32,6 @@ public class PowerType extends BaseBasicEntity<PowerType> {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    protected static final long TABLE_ID = 7002;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long SYSTEM_ID = 0;
     public static final long ACCESS_ID = 1;
 

@@ -57,11 +57,6 @@ public class MovementType extends BaseBasicEntity<MovementType> {
     @Check(constraints = "is_internal in (0,1)")
     private byte isInternal = 0;
 
-    protected static final long TABLE_ID = 251L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long INPUT_ID = 1L;
     public static final long ADJUST_INPUT_ID = 10L;

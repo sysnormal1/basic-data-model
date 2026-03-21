@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DataOriginsRepository extends BaseBasicRepository<DataOrigin, Long> {
 
-    @Override
-    default long getTableId(){return DataOrigin.getTableId();}
-
-}
+    }

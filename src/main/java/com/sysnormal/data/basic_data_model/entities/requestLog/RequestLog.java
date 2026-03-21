@@ -59,9 +59,4 @@ public class RequestLog extends BaseEntity {
     @JoinColumn(name = "agent_id", insertable = false, updatable = false)
     private Agent agent;
 
-    protected static final long TABLE_ID = 130;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

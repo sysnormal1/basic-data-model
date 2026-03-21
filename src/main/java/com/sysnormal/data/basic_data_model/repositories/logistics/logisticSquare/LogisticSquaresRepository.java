@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LogisticSquaresRepository extends BaseBasicRepository<LogisticSquare, Long> {
 
-    @Override
-    default long getTableId(){return LogisticSquare.getTableId();}
-
-}
+    }

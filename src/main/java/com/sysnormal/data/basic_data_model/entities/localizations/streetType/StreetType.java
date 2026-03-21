@@ -29,11 +29,6 @@ public class StreetType extends BaseBasicEntity<StreetType> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    protected static final long TABLE_ID = 2005L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long STREET_ID = 1L;
     public static final long AVENUE_ID = 2L;
 

@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BusinessLinesRepository extends BaseBasicRepository<BusinessLine, Long> {
 
-    @Override
-    default long getTableId(){return BusinessLine.getTableId();}
-
-}
+    }

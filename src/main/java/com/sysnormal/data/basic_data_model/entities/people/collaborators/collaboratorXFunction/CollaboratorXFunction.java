@@ -60,10 +60,4 @@ public class CollaboratorXFunction extends BaseBasicEntity<CollaboratorXFunction
     @JoinColumn(name = "collaborator_function_id", updatable = false, insertable = false)
     private CollaboratorFunction collaboratorFunction;
 
-
-    protected static final long TABLE_ID = 6003L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

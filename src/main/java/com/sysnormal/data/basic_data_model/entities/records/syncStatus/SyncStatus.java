@@ -36,11 +36,6 @@ public class SyncStatus extends BaseBasicEntity<SyncStatus> {
     @Check(constraints = "synchronized in (0,1)")
     private byte _synchronized = 1;
 
-    protected static final long TABLE_ID = 66;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 
 }

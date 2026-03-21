@@ -65,9 +65,4 @@ public class Condition extends BaseBasicEntity<Condition> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "comparation_id", updatable = false, insertable = false)
     private Comparator comparation;
-
-    protected static final long TABLE_ID = 7004;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

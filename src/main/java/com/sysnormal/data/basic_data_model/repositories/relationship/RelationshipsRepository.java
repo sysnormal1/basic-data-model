@@ -9,9 +9,6 @@ import java.util.Optional;
 @Repository
 public interface RelationshipsRepository extends BaseBasicRepository<Relationship, Long> {
 
-    @Override
-    default long getTableId(){return Relationship.getTableId();}
-
     Optional<Relationship> findByStatusRegIdAndDeletedAtIsNullAndRelationshipTypeIdAndTable1IdAndRecord1ColumnAndRecord1IdAndTable2IdAndRecord2ColumnAndRecord2IdAndEndAtIsNull(
             Long statusRegId,
             Long relationshipTypeId,

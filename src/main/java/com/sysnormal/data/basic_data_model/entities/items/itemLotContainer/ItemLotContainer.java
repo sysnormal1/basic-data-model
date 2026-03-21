@@ -54,10 +54,4 @@ public class ItemLotContainer extends BaseBasicEntity<ItemLotContainer> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "container_id", insertable = false, updatable = false)
     private Container container;
-
-    protected static final long TABLE_ID = 8020;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

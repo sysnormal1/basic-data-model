@@ -12,9 +12,6 @@ import java.util.Optional;
 @Repository
 public interface MovementsRepository extends BaseBasicRepository<Movement, Long> {
 
-    @Override
-    default long getTableId(){return Movement.getTableId();}
-
     @Query(value = """
         SELECT
             m.id as movement_id,

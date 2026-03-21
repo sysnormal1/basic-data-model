@@ -44,10 +44,4 @@ public class FiscalCode extends BaseBasicEntity<FiscalCode> {
     @JoinColumn(name = "movement_type_id", updatable = false, insertable = false)
     private MovementType movementType;
 
-
-    protected static final long TABLE_ID = 253;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

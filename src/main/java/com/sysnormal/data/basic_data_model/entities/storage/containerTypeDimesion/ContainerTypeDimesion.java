@@ -60,9 +60,4 @@ public class ContainerTypeDimesion extends BaseBasicEntity<ContainerTypeDimesion
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "measurement_unit_id", updatable = false, insertable = false)
     private MeasurementUnit measurementUnit;
-
-    protected static final long TABLE_ID = 8003;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

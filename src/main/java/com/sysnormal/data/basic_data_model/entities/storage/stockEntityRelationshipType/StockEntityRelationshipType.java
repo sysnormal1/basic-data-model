@@ -54,13 +54,6 @@ public class StockEntityRelationshipType extends BaseBasicEntity<StockEntityRela
     @Check(constraints = "is_target in (0,1)")
     private byte isTarget = 0;
 
-
-
-    protected static final long TABLE_ID = 8026;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long OWNER_ID = 1;
 
     public static final StockEntityRelationshipType OWNER = new StockEntityRelationshipType(){{

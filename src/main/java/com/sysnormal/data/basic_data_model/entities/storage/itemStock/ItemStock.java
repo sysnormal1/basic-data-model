@@ -119,10 +119,4 @@ public class ItemStock extends BaseBasicEntity<ItemStock> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "packaging_id", insertable = false, updatable = false)
     private Packaging packaging;
-
-    protected static final long TABLE_ID = 8030;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

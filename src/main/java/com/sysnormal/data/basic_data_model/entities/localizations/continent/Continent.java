@@ -32,11 +32,6 @@ public class Continent extends BaseBasicEntity<Continent> {
     @Column(name = "sigla", length = 10)
     private String sigla;
 
-    protected static final long TABLE_ID = 2000L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long SYSTEM_ID = 0;
     public static final long AMERICA_ID = 1;
     public static final long SOUTH_AMERICA_ID = 2;

@@ -32,9 +32,4 @@ public class Context extends BaseBasicEntity<Context> {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    protected static final long TABLE_ID = 20;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

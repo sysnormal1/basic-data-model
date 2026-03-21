@@ -49,12 +49,6 @@ public class MovementForm extends BaseBasicEntity<MovementForm> {
     @Check(constraints = "is_invoice in (0,1)")
     private byte isInvoice = 0;
 
-
-    protected static final long TABLE_ID = 252L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long BUDGET_ID = 1;
     public static final long ORDER_ID = 2;

@@ -44,11 +44,6 @@ public class CollaboratorFunction extends BaseBasicEntity<CollaboratorFunction> 
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
-    protected static final long TABLE_ID = 6001L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long ADMINISTRATOR_ID = 1L;
     public static final long SUPERVISOR_ID = 2L;
     public static final long SELLER_ID = 3L;

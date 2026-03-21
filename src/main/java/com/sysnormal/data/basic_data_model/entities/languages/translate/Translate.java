@@ -50,9 +50,4 @@ public class Translate extends BaseBasicEntity<Translate> {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Text text;
 
-    protected static final long TABLE_ID = 250;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

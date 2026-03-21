@@ -67,9 +67,4 @@ public class MovementEntity extends BaseBasicEntity<MovementEntity> {
     @JoinColumn(name = "stock_entity_id", insertable = false, updatable = false)
     private StockEntity stockEntity;
 
-    protected static final long TABLE_ID = 9021;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

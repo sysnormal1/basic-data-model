@@ -42,11 +42,6 @@ public class Currency extends BaseBasicEntity<Currency> {
     @Check(constraints = "is_physical in (0,1)")
     private byte isPhysical = 1;
 
-    protected static final long TABLE_ID = 1030;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long DOLAR_ID = 1;
     public static final long BRL_ID = 2;
 

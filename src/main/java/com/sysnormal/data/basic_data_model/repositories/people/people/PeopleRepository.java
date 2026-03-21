@@ -11,9 +11,6 @@ import java.util.Optional;
 @Repository
 public interface PeopleRepository extends BaseBasicRepository<People, Long> {
 
-    @Override
-    default long getTableId(){return People.getTableId();}
-
     default Optional<People> findByByIdentifierDocTypeIdAndIdentifierDoc(Long identifierDocTypeId, String identifierDoc) {
         Specification<People> specs = (root, query, cb) -> cb.and(
                 PeopleSpecs.normalizedIdentifierDocEquals(identifierDoc).toPredicate(root, query, cb),

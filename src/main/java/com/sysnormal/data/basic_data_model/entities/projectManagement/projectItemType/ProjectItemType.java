@@ -36,11 +36,6 @@ public class ProjectItemType extends BaseBasicEntity<ProjectItemType> {
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
 
-    protected static final long TABLE_ID = 15001;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long PROJECTS_ID = 1;
     public static final long PROJECT_ID = 2;
     public static final long PLANNINGS_ID = 20;

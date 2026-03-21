@@ -27,9 +27,4 @@ import lombok.Setter;
 public class ItemDepartment extends BaseBasicEntity<ItemDepartment> {
     @Column(name = "name", nullable = false)
     private String name;
-
-    protected static final long TABLE_ID = 8006L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

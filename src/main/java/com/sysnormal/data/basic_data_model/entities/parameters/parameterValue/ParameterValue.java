@@ -55,11 +55,6 @@ public class ParameterValue extends BaseBasicEntity<ParameterValue> {
     @JoinColumn(name = "table_id", insertable = false, updatable = false)
     private Tables table;
 
-    protected static final long TABLE_ID = 56;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 
 }

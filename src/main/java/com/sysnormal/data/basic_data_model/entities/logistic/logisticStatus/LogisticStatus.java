@@ -59,13 +59,6 @@ public class LogisticStatus extends BaseBasicEntity<LogisticStatus> {
     @Check(constraints = "is_total_returned in (0,1)")
     private byte isTotalReturned = 0;
 
-
-
-    protected static final long TABLE_ID = 9003L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long TO_DELIVERY_ID = 1;
     public static final long DELIVERING_ID = 2;

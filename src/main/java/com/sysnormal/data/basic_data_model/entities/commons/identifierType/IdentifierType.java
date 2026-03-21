@@ -34,11 +34,6 @@ public class IdentifierType extends BaseBasicEntity<IdentifierType> {
     @Column(name = "process_to_validate", length = Integer.MAX_VALUE)
     private String processToValidate;
 
-    protected static final long TABLE_ID = 70L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
     public static final long IDENTIFIER_ID = 1;
     public static final long CODE_ID = 2;

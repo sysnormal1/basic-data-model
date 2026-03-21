@@ -41,11 +41,6 @@ public class SqlProcess extends BaseBasicEntity<SqlProcess> {
     @JoinColumn(name = "sql_object_type_id", insertable = false, updatable = false)
     private SqlObjectType sqlObjectType;
 
-    protected static final long TABLE_ID = 10001;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
     public static final long REPORT_SALES_COST_AND_PROFIT_ID = 1;
 

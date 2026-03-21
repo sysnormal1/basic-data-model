@@ -100,10 +100,4 @@ public class StockEntity extends BaseBasicEntity<StockEntity> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "collaborator_id", insertable = false, updatable = false)
     private Collaborator collaborator;
-
-    protected static final long TABLE_ID = 8025;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

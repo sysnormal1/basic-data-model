@@ -73,11 +73,4 @@ public class Resource extends BaseBasicEntity<Resource> {
     @JoinColumn(name = "resource_type_id", insertable = false, updatable = false)
     private ResourceType resourceType;
 
-
-
-    protected static final long TABLE_ID = 211;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

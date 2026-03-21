@@ -9,8 +9,5 @@ import java.util.Optional;
 @Repository
 public interface MovementItemsRepository extends BaseBasicRepository<MovementItem, Long> {
 
-    @Override
-    default long getTableId(){return MovementItem.getTableId();}
-
     Optional<MovementItem> findByMovementIdAndItemIdAndNumOrd(Long movementId, Long itemId, Integer numOrd);
 }

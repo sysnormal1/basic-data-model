@@ -37,11 +37,6 @@ public class TemporalPeriod extends BaseBasicEntity<TemporalPeriod> {
     @Check(constraints = "system_temporal_period_name in ('milisecond','second', 'minute', 'hour', 'day', 'week', 'month', 'year', 'custom')")
     private String systemTemporalPeriodName;
 
-    protected static final long TABLE_ID = 61;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long MILISECOND_ID = 1;
     public static final long SECOND_ID = 2;
     public static final long MINUTE_ID = 3;

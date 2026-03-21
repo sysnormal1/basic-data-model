@@ -46,9 +46,4 @@ public class Midia extends BaseBasicEntity<Midia> {
     @JoinColumn(name = "table_ref_id", insertable = false, updatable = false)
     private Tables tableRef;
 
-    protected static final long TABLE_ID = 50000;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

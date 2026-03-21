@@ -95,12 +95,6 @@ public class ResourcePermission extends BaseBasicEntity<ResourcePermission> {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Agent agent;
 
-
-    protected static final long TABLE_ID = 215;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long SYSTEM_PERMISSIONS_ID = 0;
 
     public static final ResourcePermission SYSTEM_PERMISSIONS = new ResourcePermission(){{

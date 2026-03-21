@@ -35,12 +35,6 @@ public class Packaging extends BaseBasicEntity<Packaging> {
     @Column(name = "sigla", length = 10)
     private String sigla;
 
-
-    protected static final long TABLE_ID = 8001;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long BULK_ID = 1; // GRANEL
     public static final long BOX_ID = 2; //CAIXA
     public static final long PACK_ID = 3; //PACOTE

@@ -57,9 +57,4 @@ public class ProjectItem extends BaseBasicEntity<ProjectItem> {
     @JoinColumn(name = "project_item_origin_id", insertable = false, updatable = false)
     private ProjectItemOriginType projectItemOrigin;
 
-    protected static final long TABLE_ID = 15010;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

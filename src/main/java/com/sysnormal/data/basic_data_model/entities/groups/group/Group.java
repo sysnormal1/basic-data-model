@@ -48,10 +48,4 @@ public class Group extends BaseBasicEntity<Group> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "entity_type_id", insertable = false, updatable = false)
     private EntityType entityType;
-
-    protected static final long TABLE_ID = 7006;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

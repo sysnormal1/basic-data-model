@@ -32,10 +32,5 @@ public class Process extends BaseBasicEntity<Process> {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    protected static final long TABLE_ID = 200;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

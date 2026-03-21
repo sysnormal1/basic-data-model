@@ -77,10 +77,4 @@ public class ItemMovXmlImportIdConversion extends BaseBasicEntity<ItemMovXmlImpo
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "measurement_unit_id", insertable = false, updatable = false)
     private MeasurementUnit measurementUnit;
-
-    protected static final long TABLE_ID = 9038;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

@@ -10,9 +10,6 @@ import java.util.Optional;
 @Repository
 public interface FiscalCodesRepository extends BaseBasicRepository<FiscalCode, Long> {
 
-    @Override
-    default long getTableId(){return FiscalCode.getTableId();}
-
     Optional<FiscalCode> findByFiscalCode(Integer fiscalCode);
 
 }

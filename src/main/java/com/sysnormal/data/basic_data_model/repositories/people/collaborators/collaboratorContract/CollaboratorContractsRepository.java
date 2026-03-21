@@ -10,9 +10,6 @@ import java.util.Optional;
 @Repository
 public interface CollaboratorContractsRepository extends BaseBasicRepository<CollaboratorContract, Long> {
 
-    @Override
-    default long getTableId(){return CollaboratorContract.getTableId();}
-
     Optional<CollaboratorContract> findByCollaboratorIdAndEndAt(Long collaboratorId, LocalDateTime endAt);
 
 }

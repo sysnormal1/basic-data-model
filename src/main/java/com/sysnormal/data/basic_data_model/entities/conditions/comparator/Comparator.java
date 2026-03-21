@@ -29,11 +29,6 @@ public class Comparator extends BaseBasicEntity<Comparator> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    protected static final long TABLE_ID = 1005;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long EQUAL_ID = 1;
     public static final long DIFFERENT_ID = 2;
     public static final long IN_ID = 3;

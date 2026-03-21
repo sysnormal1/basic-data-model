@@ -39,9 +39,4 @@ public class State extends BaseBasicEntity<State> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "country_id", updatable = false, insertable = false)
     private Country country;
-
-    protected static final long TABLE_ID = 2002L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

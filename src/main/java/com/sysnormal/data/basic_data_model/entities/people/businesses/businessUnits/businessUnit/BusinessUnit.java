@@ -32,9 +32,4 @@ public class BusinessUnit extends BasePeopleEntity<BusinessUnit> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id", insertable = false, updatable = false)
     private Company company;
-
-    protected static final long TABLE_ID = 3001L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

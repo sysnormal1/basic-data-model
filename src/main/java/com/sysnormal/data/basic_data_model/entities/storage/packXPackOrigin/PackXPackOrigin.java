@@ -45,10 +45,5 @@ public class PackXPackOrigin extends BaseBasicEntity<PackXPackOrigin> {
     @JoinColumn(name = "packaging_id", insertable = false, updatable = false)
     private Packaging packaging;
 
-    protected static final long TABLE_ID = 30800;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

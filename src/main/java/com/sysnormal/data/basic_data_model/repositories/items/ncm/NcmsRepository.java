@@ -9,9 +9,6 @@ import java.util.Optional;
 @Repository
 public interface NcmsRepository extends BaseBasicRepository<Ncm, Long> {
 
-    @Override
-    default long getTableId(){return Ncm.getTableId();}
-
     Optional<Ncm> findByNcmAndException(Long code, Byte exception);
 
 }

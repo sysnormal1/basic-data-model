@@ -28,9 +28,4 @@ public class Language extends BaseBasicEntity<Language> {
 
     @Column(name = "name", nullable = false, length = 127)
     private String name;
-
-    protected static final long TABLE_ID = 248;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

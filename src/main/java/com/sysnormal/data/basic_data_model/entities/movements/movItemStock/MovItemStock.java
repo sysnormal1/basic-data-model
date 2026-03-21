@@ -84,10 +84,4 @@ public class MovItemStock extends BaseBasicEntity<MovItemStock> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_mov_id", insertable = false, updatable = false)
     private ActionStatus statusMov;
-
-    protected static final long TABLE_ID = 9030;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

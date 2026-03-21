@@ -92,10 +92,4 @@ public class ReportDataFountItem extends BaseBasicEntity<ReportDataFountItem> {
     @JoinColumn(name = "data_type_id", insertable = false, updatable = false)
     private DataType dataType;
 
-
-    protected static final long TABLE_ID = 10006;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

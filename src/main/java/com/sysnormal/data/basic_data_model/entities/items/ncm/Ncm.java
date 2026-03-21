@@ -83,9 +83,4 @@ public class Ncm extends BaseBasicEntity<Ncm> {
 
     @Column(name = "notes", length = Integer.MAX_VALUE)
     private String notes;
-
-    protected static final long TABLE_ID = 8008L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

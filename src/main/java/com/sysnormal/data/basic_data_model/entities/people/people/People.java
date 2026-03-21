@@ -137,11 +137,6 @@ public class People extends BaseBasicEntity<People> {
     @JoinColumn(name = "business_network_id", updatable = false, insertable = false)
     private BusinessNetwork businessNetwork;
 
-    protected static final long TABLE_ID = 100L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long SYSTEM_ID = 0;
 
     public static final People SYSTEM = new People(){{

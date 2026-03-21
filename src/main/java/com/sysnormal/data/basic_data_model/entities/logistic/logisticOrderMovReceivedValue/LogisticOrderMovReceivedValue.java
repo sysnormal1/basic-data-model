@@ -125,9 +125,4 @@ public class LogisticOrderMovReceivedValue extends BaseBasicEntity<LogisticOrder
     @JoinColumn(name = "received_currency_id", insertable = false, updatable = false)
     private Currency receivedCurrency;
 
-    protected static final long TABLE_ID = 12006;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

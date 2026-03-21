@@ -120,10 +120,4 @@ public class ItemMovUnit extends BaseBasicEntity<ItemMovUnit> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "variable_unit_measure_id", insertable = false, updatable = false)
     private MeasurementUnit variableUnitMeasure;
-
-    protected static final long TABLE_ID = 9036;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

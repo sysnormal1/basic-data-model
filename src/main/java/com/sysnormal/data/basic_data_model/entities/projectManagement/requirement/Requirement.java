@@ -48,9 +48,4 @@ public class Requirement extends BaseBasicEntity<Requirement> {
     @JoinColumn(name = "requirement_type_id", insertable = false, updatable = false)
     private RequirementType requirementType;
 
-    protected static final long TABLE_ID = 15020;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

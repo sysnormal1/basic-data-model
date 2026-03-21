@@ -62,10 +62,5 @@ public class PeopleContact extends BaseBasicEntity<PeopleContact> {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Contact contact;
 
-    protected static final long TABLE_ID = 2015;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
 }

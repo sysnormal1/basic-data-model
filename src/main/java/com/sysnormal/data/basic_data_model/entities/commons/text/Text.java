@@ -41,9 +41,4 @@ public class Text extends BaseBasicEntity<Text> {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Language language;
 
-    protected static final long TABLE_ID = 249;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

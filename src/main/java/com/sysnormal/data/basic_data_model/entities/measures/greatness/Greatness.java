@@ -47,12 +47,6 @@ public class Greatness extends BaseBasicEntity<Greatness> {
     @Check(constraints = "is_vetorial in (0,1)")
     private byte isVetorial = 0;
 
-
-    protected static final long TABLE_ID = 79L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long QUANTITY_ID = 1L;
     public static final long MASS_ID = 2L;

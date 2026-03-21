@@ -169,9 +169,4 @@ public class Relationship extends BaseBasicEntity<Relationship> {
     @JoinColumn(name = "context_id", insertable = false, updatable = false)
     private Context context;
 
-    protected static final long TABLE_ID = 1001;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

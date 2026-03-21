@@ -36,9 +36,4 @@ public class LogisticSquare extends BaseBasicEntity<LogisticSquare> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "logistic_route_id", updatable = false, insertable = false)
     private LogisticRoute logisticRoute;
-
-    protected static final long TABLE_ID = 2021L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

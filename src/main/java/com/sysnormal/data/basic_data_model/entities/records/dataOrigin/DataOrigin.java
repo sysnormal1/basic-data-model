@@ -35,11 +35,6 @@ public class DataOrigin extends BaseBasicEntity<DataOrigin> {
     @Column(name = "sigla", length = 10)
     private String sigla;
 
-    protected static final long TABLE_ID = 60L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
     public static final long DEFAULT_ORIGINDATA_ID = 1;
     public static final long WINTHOR_ID = 2;

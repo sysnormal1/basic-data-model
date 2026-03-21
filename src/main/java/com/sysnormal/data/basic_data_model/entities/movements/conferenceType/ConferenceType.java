@@ -49,12 +49,6 @@ public class ConferenceType extends BaseBasicEntity<ConferenceType> {
     @Check(constraints = "normal in (0,1)")
     private byte normal = 0;
 
-
-    protected static final long TABLE_ID = 9004L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long NORMAL_ID = 1;
     public static final long CEGA_ID = 2;
     public static final long SEMICEGA_ID = 3;

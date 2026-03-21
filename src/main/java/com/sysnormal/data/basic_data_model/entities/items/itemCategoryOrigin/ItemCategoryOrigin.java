@@ -27,9 +27,4 @@ import lombok.Setter;
 public class ItemCategoryOrigin extends BaseBasicEntity<ItemCategoryOrigin> {
     @Column(name = "name", nullable = false)
     private String name;
-
-    protected static final long TABLE_ID = 255L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

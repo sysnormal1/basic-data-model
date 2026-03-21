@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SuppliersRepository extends BasePeopleRepository<Supplier, Long> {
 
-    @Override
-    default long getTableId(){return Supplier.getTableId();}
-
-}
+    }

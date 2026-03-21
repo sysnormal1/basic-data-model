@@ -59,11 +59,6 @@ public class EntityType extends BaseBasicEntity<EntityType> {
     @JoinColumn(name = "table_id", updatable = false, insertable = false)
     private Tables tables;
 
-    protected static final long TABLE_ID = 30;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
     public static final long DATABASE_ID = 1L;
     public static final long CONNECTION_ID = 2L;

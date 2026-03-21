@@ -37,13 +37,6 @@ public class RecordStatus extends BaseBasicEntity<RecordStatus> {
     @ColumnDefault("1")
     private byte isActive = 1;
 
-
-    protected static final long TABLE_ID = 65L;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long ACTIVE_ID = 1;
     public static final long INACTIVE_ID = 2;

@@ -7,7 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SchedulersRepository extends BaseBasicRepository<Scheduler, Long> {
 
-    @Override
-    default long getTableId(){return Scheduler.getTableId();}
 
 }

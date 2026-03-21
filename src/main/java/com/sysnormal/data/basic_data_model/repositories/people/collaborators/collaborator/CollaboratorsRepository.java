@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CollaboratorsRepository extends BasePeopleRepository<Collaborator, Long> {
 
-    @Override
-    default long getTableId(){return Collaborator.getTableId();}
-
-}
+    }

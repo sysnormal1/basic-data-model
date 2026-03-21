@@ -118,12 +118,6 @@ public class Permission extends BaseBasicEntity<Permission> {
     @JoinColumn(name = "table_id", insertable = false, updatable = false)
     private Tables table;
 
-
-    protected static final long TABLE_ID = 7003;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long SYSTEM_ID = 0;
 
     public static final Permission SYSTEM_PERMISSION = new Permission(){{

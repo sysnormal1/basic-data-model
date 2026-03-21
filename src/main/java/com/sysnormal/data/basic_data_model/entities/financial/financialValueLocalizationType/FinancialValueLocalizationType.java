@@ -44,11 +44,6 @@ public class FinancialValueLocalizationType extends BaseBasicEntity<FinancialVal
     @Check(constraints = "is_eletronic in (0,1)")
     private byte isEletronic = 0;
 
-    protected static final long TABLE_ID = 1033;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long  UNKNOWN_ID = 1; //DESCONHECIDO
     public static final long  ACCOUNT_ID = 2;
     public static final long  POUCH_ID = 3; // MALOTE

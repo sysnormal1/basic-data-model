@@ -32,11 +32,6 @@ public class RelationshipType extends BaseBasicEntity<RelationshipType> {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    protected static final long TABLE_ID = 1000;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long RELATIONSHIP_ID = 1;
     public static final long IDENTIFIER_ID = 2;
     public static final long SUBORDINATED_ID = 10;

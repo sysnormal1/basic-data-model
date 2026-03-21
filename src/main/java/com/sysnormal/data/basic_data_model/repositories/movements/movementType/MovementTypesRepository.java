@@ -10,9 +10,6 @@ import java.util.Optional;
 @Repository
 public interface MovementTypesRepository extends BaseBasicRepository<MovementType, Long> {
 
-    @Override
-    default long getTableId(){return MovementType.getTableId();}
-
     default String getInternationalSigla(String sigla) {
         String result = sigla;
         if (StringUtils.hasText(sigla)) {

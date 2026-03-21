@@ -44,11 +44,6 @@ public class FinancialValueMovType extends BaseBasicEntity<FinancialValueMovType
     @Check(constraints = "is_eletronic in (0,1)")
     private byte isEletronic = 0;
 
-    protected static final long TABLE_ID = 1034;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long TRANSFERENCE_ID = 1;
     public static final long DEPOSIT_ID = 2;
     public static final long POUCH_ID = 3; // MALOTE

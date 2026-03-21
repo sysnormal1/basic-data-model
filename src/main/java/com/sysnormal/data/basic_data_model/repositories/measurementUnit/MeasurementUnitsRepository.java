@@ -10,9 +10,6 @@ import java.util.Optional;
 @Repository
 public interface MeasurementUnitsRepository extends BaseBasicRepository<MeasurementUnit, Long> {
 
-    @Override
-    default long getTableId(){return MeasurementUnit.getTableId();}
-
     default String getInternationalSigla(String sigla) {
         String result = sigla;
         if (StringUtils.hasText(sigla)) {

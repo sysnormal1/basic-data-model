@@ -40,12 +40,6 @@ public class ContainerType extends BaseBasicEntity<ContainerType> {
     @Column(name = "tara", precision = 38, scale = 10)
     private BigDecimal tara;
 
-
-    protected static final long TABLE_ID = 8002;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long NO_CONTEINER_ID = 1;
     public static final long PALLET_ID = 2;
 

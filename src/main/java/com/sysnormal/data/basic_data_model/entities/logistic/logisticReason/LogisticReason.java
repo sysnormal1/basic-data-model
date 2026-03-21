@@ -32,9 +32,4 @@ public class LogisticReason extends BaseBasicEntity<LogisticReason> {
     @Column(name = "mov_type_sigla", length = 2)
     private String movTypeSigla;
 
-    protected static final long TABLE_ID = 9002L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

@@ -37,13 +37,6 @@ public class GtinType extends BaseBasicEntity<GtinType> {
     private Long characters;
 
 
-    protected static final long TABLE_ID = 8007;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
-
     public static final long UNDEFINED_ID = 1;
     public static final long GTIN8_ID = 8;
     public static final long GTIN12_ID = 12;

@@ -48,13 +48,6 @@ public class ItemStatus extends BaseBasicEntity<ItemStatus> {
     @Check(constraints = "is_damaged in (0,1)")
     private byte isDamaged = 0;
 
-
-
-    protected static final long TABLE_ID = 8009;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long NORMAL_ID = 1;
     public static final long DAMAGED_ID = 2;
 

@@ -66,10 +66,4 @@ public class ItemPrice extends BaseBasicEntity<ItemPrice> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mov_type_id", insertable = false, updatable = false)
     private MovementType movType;
-
-    protected static final long TABLE_ID = 8040;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

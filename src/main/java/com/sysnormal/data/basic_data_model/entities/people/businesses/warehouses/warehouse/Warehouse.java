@@ -32,9 +32,4 @@ public class Warehouse extends BasePeopleEntity<Warehouse> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id", insertable = false, updatable = false)
     private Company company;
-
-    protected static final long TABLE_ID = 3002L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

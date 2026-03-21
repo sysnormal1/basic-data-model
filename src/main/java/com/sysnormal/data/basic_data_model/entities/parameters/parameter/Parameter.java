@@ -44,11 +44,6 @@ public class Parameter extends BaseBasicEntity<Parameter> {
     @JoinColumn(name = "data_type_id", insertable = false, updatable = false)
     private DataType dataType;
 
-    protected static final long TABLE_ID = 55;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 
     public static final long HAS_WINTHOR_INTEGRATION_ID = 1;
     public static final long HAS_EP_INTEGRATION_ID = 40000;

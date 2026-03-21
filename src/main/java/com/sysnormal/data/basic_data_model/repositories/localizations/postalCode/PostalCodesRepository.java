@@ -11,9 +11,6 @@ import java.util.Optional;
 @Repository
 public interface PostalCodesRepository extends BaseBasicRepository<PostalCode, Long> {
 
-    @Override
-    default long getTableId(){return PostalCode.getTableId();}
-
     default Optional<PostalCode> findByCityIdAndPostalCode(Long cityId, String postalCode) {
         Specification<PostalCode> specs = ((root, query, cb) ->
             cb.and(

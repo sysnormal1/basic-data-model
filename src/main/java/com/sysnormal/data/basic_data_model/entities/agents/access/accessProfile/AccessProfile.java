@@ -39,12 +39,6 @@ public class AccessProfile extends BaseBasicEntity<AccessProfile> {
     @Check(constraints = "allow_access_to_all_module_routines in (0,1)")
     private byte allowAccessToAllModuleRoutines = 0;
 
-    protected static final long TABLE_ID = 119L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
-
     public static final long SYSTEM_ID = 0;
     public static final long DEFAULT_ID = 1;
     public static final long PRESIDENCE_ID = 2L;

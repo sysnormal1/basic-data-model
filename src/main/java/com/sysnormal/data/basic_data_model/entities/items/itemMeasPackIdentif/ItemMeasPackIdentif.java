@@ -109,10 +109,4 @@ public class ItemMeasPackIdentif extends BaseBasicEntity<ItemMeasPackIdentif> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "stock_entity_id", insertable = false, updatable = false)
     private StockEntity stockEntity;
-
-    protected static final long TABLE_ID = 8032;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

@@ -160,9 +160,4 @@ public class MovementItem extends BaseBasicEntity<MovementItem> {
     @JoinColumn(name = "measurement_unit_id", insertable = false, updatable = false)
     private MeasurementUnit measurementUnit;
 
-    protected static final long TABLE_ID = 9029L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

@@ -59,11 +59,6 @@ public class ActionStatus extends BaseBasicEntity<ActionStatus> {
     @Column(name = "is_concluded", nullable = false)
     private byte isConcluded = 0;
 
-    protected static final long TABLE_ID = 51L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     // Constantes equivalentes
     public static final long NOT_STARTED_ID = 1L;
     public static final long RUNNING_ID = 2L;

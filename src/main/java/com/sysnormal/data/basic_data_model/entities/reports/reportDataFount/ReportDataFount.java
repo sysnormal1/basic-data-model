@@ -61,9 +61,4 @@ public class ReportDataFount extends BaseBasicEntity<ReportDataFount> {
     @Column(name = "get_value_from", length = Integer.MAX_VALUE)
     private String getValueFrom;
 
-    protected static final long TABLE_ID = 10006;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

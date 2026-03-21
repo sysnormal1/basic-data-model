@@ -55,12 +55,6 @@ public class Lot extends BaseBasicEntity<Lot> {
     @JoinColumn(name = "identifier_type_id", insertable = false, updatable = false)
     private IdentifierType identifierType;
 
-    protected static final long TABLE_ID = 8014;
-
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long WITHOUT_LOT_ID = 1;
 
     public static final Lot WITHOUT_LOT = new Lot(){{

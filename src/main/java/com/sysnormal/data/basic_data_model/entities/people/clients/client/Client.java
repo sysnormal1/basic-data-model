@@ -65,9 +65,4 @@ public class Client extends BasePeopleEntity<Client> {
     @JoinColumn(name = "seller_id", updatable = false, insertable = false)
     private Collaborator seller;
 
-    protected static final long TABLE_ID = 4000L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

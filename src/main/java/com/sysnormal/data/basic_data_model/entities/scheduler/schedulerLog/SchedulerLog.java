@@ -39,9 +39,4 @@ public class SchedulerLog extends BaseBasicEntity<SchedulerLog> {
     @JoinColumn(name = "scheduler_id", insertable = false, updatable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Scheduler scheduler;
-
-    protected static final long TABLE_ID = 18001;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

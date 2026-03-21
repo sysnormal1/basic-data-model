@@ -28,11 +28,6 @@ public class ValueName extends BaseBasicEntity<ValueName> {
     @Column(name = "name", nullable = false, length = 127)
     private String name;
 
-    protected static final long TABLE_ID = 1002;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static final long INVOICENUM_ID = 1;
 
     public static final ValueName INVOICENUM = new ValueName(){{

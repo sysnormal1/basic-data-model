@@ -39,11 +39,6 @@ public class ReportVision extends BaseBasicEntity<ReportVision> {
     @Check(constraints = "is_visible in (0,1)")
     private byte isVisible = 1;
 
-    protected static final long TABLE_ID = 10002;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
     public static long VALUES_ID = 1;
     public static long ORIGIN_DATA_ID = 2;
     public static long COMPANY_ID = 3;

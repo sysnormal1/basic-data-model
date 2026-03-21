@@ -81,9 +81,4 @@ public class WarehouseAddress extends BaseBasicEntity<WarehouseAddress> {
     @JoinColumn(name = "form_type_id", insertable = false, updatable = false)
     private FormType formType;
 
-    protected static final long TABLE_ID = 3004;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

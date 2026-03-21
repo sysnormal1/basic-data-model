@@ -46,9 +46,4 @@ public class Street extends BaseBasicEntity<Street> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city_id", updatable = false, insertable = false)
     private City city;
-
-    protected static final long TABLE_ID = 2006L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

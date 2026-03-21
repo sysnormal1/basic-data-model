@@ -57,10 +57,4 @@ public class Assets extends BaseBasicEntity<Assets> {
     @JoinColumn(name = "identifier_type_id", updatable = false, insertable = false)
     private IdentifierType identifierType;
 
-
-    protected static final long TABLE_ID = 1110L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

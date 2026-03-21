@@ -67,9 +67,4 @@ public class Isic extends BaseBasicEntity<Isic> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "state_id", updatable = false, insertable = false)
     private State state;
-
-    protected static final long TABLE_ID = 2050L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

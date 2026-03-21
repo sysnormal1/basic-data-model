@@ -60,9 +60,4 @@ public class ContainerTypeCapacity extends BaseBasicEntity<ContainerTypeCapacity
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "measurement_unit_id", updatable = false, insertable = false)
     private MeasurementUnit measurementUnit;
-
-    protected static final long TABLE_ID = 8004;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
 }

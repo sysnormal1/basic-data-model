@@ -60,10 +60,4 @@ public class CollaboratorContract extends BaseBasicEntity<CollaboratorContract> 
     @JoinColumn(name = "contract_type_id", updatable = false, insertable = false)
     private ContractType contractType;
 
-
-    protected static final long TABLE_ID = 6002L;
-    public static long getTableId() {
-        return TABLE_ID;
-    }
-
 }

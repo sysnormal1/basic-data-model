@@ -9,9 +9,6 @@ import java.util.Optional;
 @Repository
 public interface StatesRepository extends BaseBasicRepository<State, Long> {
 
-    @Override
-    default long getTableId(){return State.getTableId();}
-
     Optional<State> findByCountryIdAndSigla(Long countryId, String sigla);
 
 }
