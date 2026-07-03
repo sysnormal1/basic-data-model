@@ -2,9 +2,7 @@ package com.sysnormal.data.basic_data_model.repositories;
 
 import com.sysnormal.data.base_data_model.repositories.BaseCommonRepository;
 import com.sysnormal.data.basic_data_model.entities.BaseBasicEntity;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.NoRepositoryBean;
-import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
