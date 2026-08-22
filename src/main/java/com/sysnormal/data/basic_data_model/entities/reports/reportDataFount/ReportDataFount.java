@@ -61,4 +61,14 @@ public class ReportDataFount extends BaseBasicEntity<ReportDataFount> {
     @Column(name = "get_value_from", length = Integer.MAX_VALUE)
     private String getValueFrom;
 
+    /**
+     * Onde as regras de restricao de acesso se aplicam dentro do SQL deste
+     * fount, declarado em JSON por escopo e alias.
+     *
+     * Existe porque texto puro nao tem no em que pendurar a marcacao que o
+     * item de fount recebe em `access_restriction_mode`.
+     */
+    @Column(name = "access_restriction_targets", length = Integer.MAX_VALUE)
+    private String accessRestrictionTargets;
+
 }

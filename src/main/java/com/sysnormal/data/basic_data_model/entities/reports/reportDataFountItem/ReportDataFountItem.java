@@ -60,6 +60,20 @@ public class ReportDataFountItem extends BaseBasicEntity<ReportDataFountItem> {
     @Column(name = "access_critery", length = Integer.MAX_VALUE)
     private String accessCritery;
 
+    /**
+     * Como a restricao de acesso trata esta ocorrencia de tabela.
+     *
+     * Vocabulario fechado: RESTRICT aplica o predicado da permissao nesta
+     * ocorrencia; EXEMPT isenta deliberadamente. Nulo significa nao declarado,
+     * e quem decide e a politica de `unmatched` da propria permissao.
+     *
+     * Nao confundir com `access_critery`, que e expressao avaliada como o
+     * `existence_critery` e governa a existencia do no.
+     */
+    @Column(name = "access_restriction_mode", length = 20)
+    @Check(constraints = "access_restriction_mode in ('RESTRICT','EXEMPT')")
+    private String accessRestrictionMode;
+
     @Column(name = "is_unique_in_groupment", nullable = false)
     @ColumnDefault("0")
     @Check(constraints = "is_unique_in_groupment in (0,1)")
