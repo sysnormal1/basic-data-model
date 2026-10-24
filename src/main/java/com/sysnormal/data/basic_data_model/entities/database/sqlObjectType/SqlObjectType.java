@@ -46,6 +46,8 @@ public class SqlObjectType extends BaseBasicEntity<SqlObjectType> {
     public static final long HAVING_ID = 1400;
     public static final long ORDER_BY_ID = 1500;
     public static final long PIVOT_ID = 1600;
+    public static final long UNION_ID = 1610;
+    public static final long UNION_ALL_ID = 1611;
     public static final long FOR_ID = 1650;
     public static final long IN_ID = 1655;
     public static final long TEXT_ID = 10000;
@@ -131,6 +133,16 @@ public class SqlObjectType extends BaseBasicEntity<SqlObjectType> {
         setIsSysRec((byte) 1);
         setParentId(SELECT_ID);
         setName("PIVOT");
+    }};
+    public static final SqlObjectType UNION = new SqlObjectType(){{
+        setId(UNION_ID);
+        setIsSysRec((byte) 1);
+        setName("UNION");
+    }};
+    public static final SqlObjectType UNION_ALL = new SqlObjectType(){{
+        setId(UNION_ALL_ID);
+        setIsSysRec((byte) 1);
+        setName("UNION ALL");
     }};
     public static final SqlObjectType FOR = new SqlObjectType(){{
         setId(FOR_ID);
