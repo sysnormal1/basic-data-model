@@ -49,6 +49,14 @@ public class IntegrationRule extends BaseBasicEntity<IntegrationRule> {
     @Column(name = "rule", nullable = false, length = Integer.MAX_VALUE)
     private String rule;
 
+    /**
+     * A regra em forma declarada (JSON com {@code when} e {@code check}), que o
+     * server-service serve e confere sem executar código. {@code condition_to_check} e
+     * {@code rule} são o JavaScript de antes, e saem quando ninguém mais os executar.
+     */
+    @Column(name = "definition", length = Integer.MAX_VALUE)
+    private String definition;
+
     @Column(name = "check_at_front", nullable = false)
     @ColumnDefault("1")
     @Check(constraints = "check_at_front in (0,1)")
